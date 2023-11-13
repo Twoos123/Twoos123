@@ -8,7 +8,7 @@ I am a 2nd-year Software Engineering student at the University of Ottawa, curren
 
 * 🌍  I'm based in Ottawa, Ontario
 * ✉️  You can contact me at [masadbali190@gmail.com](mailto:masadbali190@gmail.com)
-* 🚀  I'm currently working on [My Personal Website](http://localhost)
+* 🚀  I'm currently working on [My Personal Website](http://localhost) and uOttaApp (secret ;))
 * 🧠  I'm learning TypeScript and TensorFlow
 * 🤝  I'm open to collaborating on innovative projects
 * ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.

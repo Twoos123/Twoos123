@@ -10,7 +10,7 @@ I am a 2nd-year Software Engineering student at the University of Ottawa, curren
 * ✉️  You can contact me at [masadbali190@gmail.com](mailto:masadbali190@gmail.com)
 * 🚀  I'm currently on a CO-OP term as a Backend Developer for Fuze: an 8x8 Company.
 * 🧠  I'm learning SpringBoot and Docker.
-* 🌐 Currently on the uOttaHack 6 team as a Logistics Coordinator.
+* 🌐 Currently on the uOttawa Software Engineering Student Association team as Vice President of Development.
 * 🤝  I'm open to collaborating on innovative projects involving cloud softwares and backend development.
 * ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.
 

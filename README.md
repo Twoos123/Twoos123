@@ -1,7 +1,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Asad Ali
 ================================================================================================================================
 
-Web Developer
+Software Engineer
 -------------
 
 I am a 2nd-year Software Engineering student at the University of Ottawa, currently diving into the world of web development. My coding journey spans 3 years, and it all began with Java. Over time, I've discovered a profound passion for backend development, and I'm excited about the endless possibilities in the software engineering realm.

@@ -13,7 +13,7 @@ I am a 2nd-year Software Engineering student at the University of Ottawa, curren
 * 🌐 Currently VP Development for the uOttawa Software Engineering Student Association.
 * 🤝  I'm open to collaborating on innovative projects involving cloud softwares and backend development.
 * ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.
-* 🖱️ I also play Counter-Strike in my spare time, check out my [Faceit](https://www.faceit.com/en/players/Twoos/stats/cs2) :D
+* 🖱️ I also play Counter-Strike in my spare time, check out my [FACEIT Account](https://www.faceit.com/en/players/Twoos/stats/cs2) :D
 
 <a href="https://www.github.com/Twoos123" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/github/followers/Twoos123?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>

@@ -4,7 +4,7 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Software Engineer
 -------------
 
-I am a 2nd-year Software Engineering student at the University of Ottawa, currently diving into the world of DevOps and backend development. My coding journey spans 3 years, and it all began with Java. Over time, I've discovered a profound passion for backend development, and I'm excited about the endless possibilities in the software engineering realm.
+I am a 3rd-year Software Engineering student at the University of Ottawa, currently diving into the world of DevOps and backend development. My coding journey spans 4 years, and it all began with Java. Over time, I've discovered a profound passion for backend development, and I'm excited about the endless possibilities in the software engineering realm.
 
 * 🌍  I'm based in Ottawa, Ontario.
 * ✉️  You can contact me at [masadbali190@gmail.com](mailto:masadbali190@gmail.com)

@@ -32,4 +32,4 @@ src="https://img.shields.io/github/followers/Twoos123?logo=github&style=for-the-
 
 <b>My GitHub Stats</b>
 
-[![Twoos123's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/Twoos123/github-readme-stats)
+![Twoos123's GitHub stats](https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&theme=radical)

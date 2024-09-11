@@ -9,7 +9,7 @@ I am a 3rd-year Software Engineering student at the University of Ottawa, curren
 * 🌍  I'm based in Ottawa, Ontario.
 * ✉️  You can contact me at [masadbali190@gmail.com](mailto:masadbali190@gmail.com)
 * 🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)
-* 🧠  I'm learning Go and Docker.
+* 🧠  I'm learning TensorFlow, Docker, and Dynamic Programming.
 * 🌐 Currently VP Development for the uOttawa Software Engineering Student Association.
 * 🤝  I'm open to collaborating on innovative projects involving cloud softwares and backend development.
 * ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.

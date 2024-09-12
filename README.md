@@ -28,9 +28,5 @@ src="https://img.shields.io/github/followers/Twoos123?logo=github&style=for-the-
 
 <a href="https://www.linkedin.com/in/asadbinali/" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /> </picture> </a></p>
 
-### Badges
-
-<b>My GitHub Stats</b>
-
 ![LeetCode Stats](https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity)
 ![Twoos123's GitHub stats](https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&theme=radical)

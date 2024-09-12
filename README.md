@@ -86,7 +86,9 @@
 <div align="center"><img src="https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&count_private=true&hide_border=true" align="center" /></div>  
 
 <div align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&hide_border=true&layout=compact" align="center" />
-![LeetCode Stats](https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity)
+</div> 
+
+<div align="center"><img src="https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity" align="center" />
 </div> 
 
 <div align="center">

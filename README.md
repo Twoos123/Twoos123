@@ -88,7 +88,7 @@
   <table>
     <tr>
       <td>
-        <<img src="https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity" align="center" />
+        <img src="https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity" align="center" />
       </td>
       <td>
         <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&count_private=true&hide_border=true" align="center" />

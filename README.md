@@ -32,4 +32,5 @@ src="https://img.shields.io/github/followers/Twoos123?logo=github&style=for-the-
 
 <b>My GitHub Stats</b>
 
+![LeetCode Stats](https://leetcard.jacoblin.cool/Twoos123?theme=dark&font=Sree%20Krushnadevaraya&ext=activity)
 ![Twoos123's GitHub stats](https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&theme=radical)

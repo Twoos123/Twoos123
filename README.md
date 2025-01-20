@@ -1,4 +1,4 @@
-### <div align="center">I'm Asad, a third year software engineering student👨‍💻</div>  
+# <div align="center">I'm Asad, a third year software engineering student👨‍💻</div>  
   
 # 💫 About Me:
 🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning TensorFlow, Docker, and Dynamic Programming.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Currently Co-Director for the uOttawa Software Engineering Student Association.  <br>⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  

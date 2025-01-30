@@ -45,9 +45,9 @@
 
 # 📊 GitHub Stats:
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false" width="33%" />
-  <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6" width="33%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="33%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false" width="300" height="200" />
+  <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6" width="300" height="200" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="300" height="200" />
 </div>
 
 ## 🏆 GitHub Trophies

@@ -43,7 +43,7 @@
 [![Rancher](https://img.shields.io/badge/rancher-%230075A8.svg?style=for-the-badge&logo=rancher&logoColor=white)](https://www.rancher.com/) 
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/)
 
-# 📊 GitHub Stats:
+# 📊 Stats:
 <div align="center">
   <table>
     <tr>

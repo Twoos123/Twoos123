@@ -1,13 +1,13 @@
 # <div align="center">I'm Asad, a third year software engineering student👨‍💻</div>  
   
-# 💫 About Me:
+## 💫 About Me:
 🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning TensorFlow, Docker, and Dynamic Programming.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Currently Co-Director for the uOttawa Software Engineering Student Association.  <br>⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  
 
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/asadbinali/) 
 
-# 💻 Tech Stack:
+## 💻 Tech Stack:
 [![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/) 
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javascript.com/) 
 [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) 
@@ -43,7 +43,7 @@
 [![Rancher](https://img.shields.io/badge/rancher-%230075A8.svg?style=for-the-badge&logo=rancher&logoColor=white)](https://www.rancher.com/) 
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/)
 
-# 📊 Stats:
+## 📊 Stats:
 <div align="center">
   <table>
     <tr>
@@ -71,7 +71,7 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Twoos123&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-### ✍️ Random Dev Quote
+## ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---

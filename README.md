@@ -45,10 +45,28 @@
 
 # 📊 GitHub Stats:
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false" width="300" height="200" />
-  <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6" width="300" height="200" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="300" height="200" />
+  <table>
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false" width="300" height="200" />
+      </td>
+      <td>
+        <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6" width="300" height="200" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="300" height="200" />
+      </td>
+      <td>
+        <a href="https://leetcode.com/Twoos123/">
+          <img src="https://leetcard.jacoblin.cool/Twoos123?radius=6&theme=unicorn&ext=heatmap" width="300" height="200" />
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
+
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Twoos123&theme=radical&no-frame=false&no-bg=true&margin-w=4)

@@ -44,9 +44,11 @@
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/)
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6))<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false" width="33%" />
+  <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6" width="33%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="33%" />
+</div>
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Twoos123&theme=radical&no-frame=false&no-bg=true&margin-w=4)

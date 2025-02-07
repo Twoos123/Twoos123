@@ -69,9 +69,9 @@
 
 
 ## ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
----
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
+</p>
 
 <br>
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=Twoos123&label=Profile%20views&color=blueviolet&style=for-the-badge" alt="Twoos123" /> </p>

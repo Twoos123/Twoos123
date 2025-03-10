@@ -52,7 +52,7 @@
   <table>
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=radical&hide_border=false&include_all_commits=true&count_private=true&show_icons=true&show=prs_merged&rank_icon=percentile"/>
+        <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=radical&hide_border=false&include_all_commits=true&count_private=true&show_icons=true&show=prs_merged&rank_icon=grade"/>
       </td>
       <td>
         <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6"/>

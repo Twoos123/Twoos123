@@ -59,7 +59,7 @@
       </td>
     </tr>
     <tr>
-      <td>
+      <td align="center">
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=radical&layout=compact&show_icons=true&langs_count=20"/>
       </td>
       <td>

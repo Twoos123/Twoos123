@@ -1,11 +1,16 @@
 # <div align="center">I'm Asad, a third year software engineering student👨‍💻</div>  
   
 ## 💫 About Me:
-🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning TensorFlow, Docker, and Dynamic Programming.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Currently Co-Director for the uOttawa Software Engineering Student Association.  <br>⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  
+#### 🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning Next.js and FastAPI.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Currently Co-Director for the uOttawa Software Engineering Student Association.  <br>⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  
 
 
 ## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/asadbinali/) 
+<a href="https://linkedin.com/in/asadbinali/">
+  <img 
+    src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" 
+    style="height:25px;"
+  />
+</a>
 
 ## 💻 Tech Stack:
 <div align="center">
@@ -45,14 +50,14 @@
 [![Rancher](https://img.shields.io/badge/rancher-%230075A8.svg?style=for-the-badge&logo=rancher&logoColor=white)](https://www.rancher.com/) 
 [![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/)
 
-</div>  
+</div> 
 
 ## 📊 Stats:
 <div align="center">
   <table>
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&theme=radical&hide_border=false&include_all_commits=true&count_private=true&show_icons=true&show=prs_merged&rank_icon=grade"/>
+        <img src="https://github-readme-stats.vercel.app/api?username=Twoos123&show_icons=true&theme=radical&include_all_commits=true&show=discussions,prs_merged,prs_merged_percentage"/>
       </td>
       <td>
         <img src="https://github-readme-streak-stats-vercel.vercel.app/?user=Twoos123&theme=radical&border_radius=6"/>
@@ -60,7 +65,9 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=radical&layout=compact&show_icons=true&langs_count=20"/>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Twoos123&theme=radical&layout=compact&show_icons=true&langs_count=8"
+        width="100%"
+  />
       </td>
       <td>
         <a href="https://leetcode.com/Twoos123/">

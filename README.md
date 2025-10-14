@@ -1,3 +1,5 @@
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 # <div align="center">I'm Asad, a 4th year software engineering student 👨‍💻</div>  
   
 ## 💫 About Me:
@@ -137,7 +139,7 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 </a>
 <!-- Flask -->
 <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Logo" width="40" height="40" />
+<i class="devicon-flask-original" style="font-size: 40px; color: white;"></i>
 </a>
 <!-- Tailwind CSS -->
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">

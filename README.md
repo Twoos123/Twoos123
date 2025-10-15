@@ -79,10 +79,6 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux Logo" width="40" height="40" />
 </a>
-<!-- GitHub -->
-<a href="https://github.com/" target="_blank" rel="noreferrer">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo" width="40" height="40" />
-</a>
 <!-- Git -->
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git Logo" width="40" height="40" />

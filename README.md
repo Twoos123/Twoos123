@@ -31,7 +31,6 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 </tr>
 <tr>
 <td align='center'>
-  
 <!-- TypeScript -->
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript Logo" width="40" height="40" />
@@ -58,19 +57,35 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <a href="https://nodejs.org/en/about" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" alt="Node.js Logo" width="40" height="40" />
 </a>
+<!-- Express.js -->
+<a href="https://expressjs.com/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express Logo" width="40" height="40" />
+</a>
 <!-- FastAPI -->
 <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer">
 <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI Logo" width="40" height="40" />
 </a>
 </td>
 <td align='center'>
-<!-- Git -->
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git Logo" width="40" height="40" />
+<!-- Drupal -->
+<a href="https://www.drupal.org/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-plain-wordmark.svg" alt="Drupal Logo" width="40" height="40" />
 </a>
 <!-- Apache -->
 <a href="https://httpd.apache.org/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg" alt="Apache Logo" width="40" height="40" />
+</a>
+<!-- Linux -->
+<a href="https://www.linux.org/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux Logo" width="40" height="40" />
+</a>
+<!-- GitHub -->
+<a href="https://github.com/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo" width="40" height="40" />
+</a>
+<!-- Git -->
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git Logo" width="40" height="40" />
 </a>
 <!-- Docker -->
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
@@ -80,17 +95,21 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <a href="https://kubernetes.io" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes Logo" width="40" height="40" />
 </a>
-<!-- Linux -->
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux Logo" width="40" height="40" />
+<!-- Vercel -->
+<a href="https://vercel.com/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel Logo" width="40" height="40" />
+</a>
+<!-- Firebase -->
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase Logo" width="40" height="40" />
 </a>
 <!-- MySQL -->
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Logo" width="40" height="40" />
 </a>
-<!-- Drupal -->
-<a href="https://www.drupal.org/" target="_blank" rel="noreferrer">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-plain-wordmark.svg" alt="Drupal Logo" width="40" height="40" />
+<!-- OAuth 2.0 -->
+<a href="https://oauth.net/2/" target="_blank" rel="noreferrer">
+<img src="https://oauth.net/images/oauth-2-sm.png" alt="OAuth 2.0 Logo" width="40" height="40" />
 </a>
 </td>
 </tr>
@@ -111,25 +130,21 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="40" height="40" />
 </a>
-<!-- Elixir -->
-<a href="https://elixir-lang.org/" target="_blank" rel="noreferrer">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" alt="Elixir Logo" width="40" height="40" />
-</a>
 <!-- Kotlin -->
 <a href="https://kotlinlang.org/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin Logo" width="40" height="40" />
 </a>
-<!-- C++ -->
-<a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noreferrer">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++ Logo" width="40" height="40" />
-</a>
-<!-- HTML -->
+<!-- HTML5 -->
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML Logo" width="40" height="40" />
 </a>
-<!-- CSS -->
+<!-- CSS3 -->
 <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS Logo" width="40" height="40" />
+</a>
+<!-- C++ -->
+<a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noreferrer">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++ Logo" width="40" height="40" />
 </a>
 </td>
 <td align='center'>
@@ -139,23 +154,23 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 </a>
 <!-- Flask -->
 <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">
-<i class="devicon-flask-original" style="font-size: 40px; color: white;"></i>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Logo" width="40" height="40" />
 </a>
 <!-- Tailwind CSS -->
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS Logo" width="40" height="40" />
 </a>
+<!-- Vite -->
+<a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite Logo" width="40" height="40" />
+</a>
+<!-- GraphQL -->
+<a href="https://graphql.org/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL Logo" width="40" height="40" />
+</a>
 <!-- Streamlit -->
 <a href="https://streamlit.io/" target="_blank" rel="noreferrer">
 <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit Logo" width="40" height="40" />
-</a>
-<!-- Express.js -->
-<a href="https://expressjs.com/" target="_blank" rel="noreferrer">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express Logo" width="40" height="40" />
-</a>
-<!-- OAuth 2.0 -->
-<a href="https://oauth.net/2/" target="_blank" rel="noreferrer">
-<img src="https://oauth.net/images/oauth-2-sm.png" alt="OAuth 2.0 Logo" width="40" height="40" />
 </a>
 </td>
 <td align='center'>
@@ -167,9 +182,33 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB Logo" width="40" height="40" />
 </a>
+<!-- PostgreSQL -->
+<a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Logo" width="40" height="40" />
+</a>
 <!-- Redis -->
 <a href="https://redis.io" target="_blank" rel="noreferrer">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis Logo" width="40" height="40" />
+</a>
+<!-- SQLite -->
+<a href="https://sqlite.org/" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite Logo" width="40" height="40" />
+</a>
+<!-- Postman -->
+<a href="https://postman.com/" target="_blank" rel="noreferrer">
+<img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman Logo" width="40" height="40" />
+</a>
+<!-- JIRA -->
+<a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="JIRA Logo" width="40" height="40" />
+</a>
+<!-- Stripe -->
+<a href="https://stripe.com/" target="_blank" rel="noreferrer">
+<img src="https://brandeps.com/icon-download/S/Stripe-icon-vector-01.svg" alt="Stripe Logo" width="40" height="40" />
+</a>
+<!-- Cloudinary -->
+<a href="https://cloudinary.com/" target="_blank" rel="noreferrer">
+<img src="https://brandeps.com/icon-download/C/Cloudinary-icon-vector-01.svg" alt="Cloudinary Logo" width="40" height="40" />
 </a>
 </td>
 </tr>
@@ -185,6 +224,10 @@ My technical toolkit evolves with each project I undertake. I believe in learnin
 <!-- Rust -->
 <a href="https://www.rust-lang.org/" target="_blank" rel="noreferrer">
 <img src="https://icons.veryicon.com/png/o/business/vscode-program-item-icon/rust-1.png" alt="Rust Logo" width="40" height="40" />
+</a>
+<!-- Embedded Rust -->
+<a href="https://www.rust-lang.org/" target="_blank" rel="noreferrer">
+<img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="Embedded Rust Logo" width="40" height="40" style="background: white; border-radius: 5px; padding: 5px;" />
 </a>
 </td>
 <td align='center'>

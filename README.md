@@ -3,7 +3,7 @@
 # <div align="center">I'm Asad, a 4th year software engineering student 👨‍💻</div>  
   
 ## 💫 About Me:
-#### 🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning how to use ArchLinux + Emacs.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Co-Director for the uOttawa Software Engineering Students' Association. <br> 👨‍💻 Working part-time as a Fullstack Developer for the University of Ottawa's Faculty of Law. <br> ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  
+#### 🌍  I'm based in Ottawa, Ontario.  <br>✉️  You can contact me at masadbali190@gmail.com  <br>🧠  I'm learning how to use ArchLinux + Emacs.  <br>🖥️ Check out my [Portfolio](https://twoos123.github.io/asadali-portfolio/)  <br>🌐 Advisor for the uOttawa Software Engineering Students' Association. <br> 👨‍💻 Working part-time as a Fullstack Developer for the University of Ottawa's Faculty of Law. <br> ⚡  Feel free to reach out! I'm always up for a chat about tech, coding, or anything else you find fascinating.  <br>  
 
 
 ## 🌐 Socials:

@@ -16,7 +16,7 @@
 ### 🧭 Snapshot
 
 - 🎓 Final-year Software Engineering (CO-OP) @ **University of Ottawa** · graduating Dec 2026
-- 💼 **Incoming** SWE Intern @ **Health Canada** · Summer 2026
+- 💼 SWE Intern @ **Health Canada** · Summer 2026
 - 🪄 Just wrapped part-time fullstack work at **uOttawa Faculty of Law**
 - 🌊 Advisor for the **uOttawa Software Engineering Students' Association**
 - 🔧 Currently building [**cs2-meta-engine**](https://github.com/Twoos123/cs2-meta-engine) — a pro-level CS2 demo analysis platform

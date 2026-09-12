@@ -1,7 +1,7 @@
 <!-- Banner / typing header -->
 <p align="center">
   <a href="https://asadbinali.com">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&size=26&duration=3000&pause=800&color=7DD3FC&center=true&vCenter=true&width=620&lines=Hey%2C+I'm+Asad+%F0%9F%91%8B;Software+Engineer+%C2%B7+Ottawa%2C+ON;Incoming+%40+Health+Canada+%C2%B7+Summer+2026;Currently+building+cs2-meta-engine" alt="Typing banner" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&size=26&duration=3000&pause=800&color=7DD3FC&center=true&vCenter=true&width=680&lines=Hey%2C+I'm+Asad+%F0%9F%91%8B;Software+Engineer+%C2%B7+Ottawa%2C+ON;Cloud+Infrastructure+Intern+%40+Sun+Life;Currently+building+cs2-meta-engine" alt="Typing banner" />
   </a>
 </p>
 
@@ -16,8 +16,8 @@
 ### 🧭 Snapshot
 
 - 🎓 Final-year Software Engineering (CO-OP) @ **University of Ottawa** · graduating Dec 2026
-- 💼 SWE Intern @ **Health Canada** · Summer 2026
-- 🌊 Advisor for the **uOttawa Software Engineering Students' Association**
+- 💼 Cloud Infrastructure Analyst Intern @ **Sun Life** · Fall 2026
+- 🌊 Advisor (ex-Co-Director & Dev Lead) for the **uOttawa Software Engineering Students' Association (SESA)**
 - 🔧 Currently building [**cs2-meta-engine**](https://github.com/Twoos123/cs2-meta-engine) — a pro-level CS2 demo analysis platform
 - 📬 Always up for a chat — `masadbali190@gmail.com`
 
@@ -25,15 +25,21 @@
 
 ### 🧰 Core Stack
 
-| TypeScript | Python | React | Next.js | Node.js | FastAPI | Tailwind | PostgreSQL | Docker | Linux |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" height="40" alt="Next.js" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40" alt="FastAPI" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40" alt="Tailwind" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="PostgreSQL" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" /> |
+| TypeScript | Python | Java | React | Next.js | FastAPI | Node.js | Spring Boot | Tailwind |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" alt="Java" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" height="40" alt="Next.js" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" height="40" alt="FastAPI" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="40" height="40" alt="Spring Boot" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40" alt="Tailwind" /> |
 
-### 🔭 Exploring Next
+### ☁️ Cloud, DevOps & Databases
 
-| Rust | Go | PyTorch | AWS | Kubernetes |
-|:---:|:---:|:---:|:---:|:---:|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="40" height="40" alt="Rust" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40" alt="Go" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="40" height="40" alt="PyTorch" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="40" height="40" alt="AWS" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" width="40" height="40" alt="Kubernetes" /> |
+| AWS | Kubernetes | Docker | Terraform | PostgreSQL | Redis | Linux | Supabase |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="40" height="40" alt="AWS" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" height="40" alt="Kubernetes" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="40" height="40" alt="Terraform" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" height="40" alt="PostgreSQL" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" width="40" height="40" alt="Redis" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" width="40" height="40" alt="Supabase" /> |
+
+### 🔭 Exploring & Deepening
+
+| Rust | Go | PyTorch | Ansible | Prometheus | Grafana |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="40" height="40" alt="Rust" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40" alt="Go" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="40" height="40" alt="PyTorch" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" width="40" height="40" alt="Ansible" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" width="40" height="40" alt="Prometheus" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" width="40" height="40" alt="Grafana" /> |
 
 <p align="center"><sub>Full toolkit at <a href="https://asadbinali.com/#skills">asadbinali.com</a></sub></p>
 

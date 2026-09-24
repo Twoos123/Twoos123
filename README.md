@@ -1,6 +1,6 @@
 <!-- Generated from README.template.md by scripts/generate.mjs: edit the template, not README.md. -->
 <a href="https://asadbinali.com">
-  <img src="assets/hud.svg" width="100%" alt="My GitHub as a Counter-Strike 2 HUD. The killfeed is my latest GitHub activity, the score shows this week's contributions and my streak, and the ammo is the latest repo's commits and stars." />
+  <img src="assets/hud.svg" width="100%" alt="My GitHub as a Counter-Strike 2 HUD, over a screenshot of Mirage from mid window. The killfeed is my latest GitHub activity, the score shows this week's contributions and my streak, and the ammo is the latest repo's commits and stars." />
 </a>
 
 <p align="center">
@@ -22,4 +22,4 @@
   <img src="assets/gg.svg" width="100%" alt="Visit asadbinali.com for the full portfolio." />
 </a>
 
-<p align="center"><sub>Redrawn every day from my GitHub activity and my portfolio's content by <a href="scripts/generate.mjs">scripts/generate.mjs</a>. CS2 icons © Valve Corporation, extracted from the game files by <a href="https://github.com/Juknum/counter-strike-icons">Juknum/counter-strike-icons</a>; this profile isn't affiliated with Valve.</sub></p>
+<p align="center"><sub>Redrawn every day from my GitHub activity and my portfolio's content by <a href="scripts/generate.mjs">scripts/generate.mjs</a>. CS2 icons © Valve Corporation, extracted from the game files by <a href="https://github.com/Juknum/counter-strike-icons">Juknum/counter-strike-icons</a>; the Mirage screenshot and radar are Valve's too (<a href="images/SOURCE.md">sources</a>). This profile isn't affiliated with Valve.</sub></p>

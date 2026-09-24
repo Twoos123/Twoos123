@@ -11,6 +11,7 @@ on:
     paths:
       - 'scripts/**'
       - 'icons/**'
+      - 'images/**'
       - 'profile.config.json'
       - 'README.template.md'
       - '.github/workflows/refresh.yml'

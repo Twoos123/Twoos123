@@ -12,7 +12,6 @@
 <radialGradient id="vignette" cx="0.5" cy="0.48" r="0.72"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.82"/></radialGradient>
 <linearGradient id="ctbox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4c7c"/><stop offset="1" stop-color="#172a47"/></linearGradient>
 <linearGradient id="tbox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b5424"/><stop offset="1" stop-color="#3a2d12"/></linearGradient>
-<linearGradient id="level" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a1a"/><stop offset="1" stop-color="#e2150c"/></linearGradient>
 <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" fill-opacity="0.035"/></pattern>
 <filter id="dof" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.8"/></filter>
 <filter id="lift" x="-10%" y="-40%" width="120%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.7"/></filter>
@@ -48,7 +47,6 @@
 .eyebrow { font: 700 11px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 3px; fill: #9aa5b1; }
 .name { font: 700 66px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 1px; fill: #fff; }
 .pill { font: 700 11px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 1.2px; fill: #e8ebef; }
-.lvl { font: 800 11px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #fff; }
 .hp { font: 700 30px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #f2f4f7; }
 .weapon { font: 700 12px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 1px; fill: #9aa5b1; }
 .ammo { font: 700 30px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #f2f4f7; }
@@ -131,7 +129,7 @@
 <text x="36" y="252" class="eyebrow">SPECTATING · <tspan fill="#6f9ce6">Twoos123</tspan></text>
 <text x="34" y="310" class="name" filter="url(#lift)">ASAD ALI</text>
 <text x="36" y="342" class="tagline t0" style="animation-delay:-0.6s">Software Engineer · Ottawa, ON</text><text x="36" y="342" class="tagline t1" style="animation-delay:3.4s">Cloud Infrastructure Intern @ Sun Life</text><text x="36" y="342" class="tagline t2" style="animation-delay:7.4s">Building cs2-meta-engine</text>
-<g transform="translate(36 360)"><rect width="150.3" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="#ff5500" stroke-opacity="0.8"/><circle cx="14" cy="13" r="9.5" fill="url(#level)"/><text x="14" y="17" text-anchor="middle" class="lvl">10</text><text x="37" y="17.5" class="pill">FACEIT LEVEL 10</text></g><g transform="translate(194.3 360)"><rect width="103.8" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.22"/><text x="11" y="17.5" class="pill">TOP 2,000 NA</text></g><g transform="translate(306.1 360)"><rect width="124.3" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.22"/><text x="11" y="17.5" class="pill">19 PUBLIC REPOS</text></g>
+<g transform="translate(36 360)"><rect width="124.3" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.22"/><text x="11" y="17.5" class="pill">19 PUBLIC REPOS</text></g>
 
 <g transform="translate(36 404)">
 <use href="#i-health_cross" x="0" y="2" width="24" height="24" style="color:#f2f4f7" />

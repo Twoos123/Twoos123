@@ -133,23 +133,9 @@ function playerCard(config, data) {
   const share = 100 / lines.length;
   const taglines = lines.map((line, i) => `<text x="36" y="342" class="tagline t${i}" style="animation-delay:${i * 4 - 0.6}s">${esc(line)}</text>`).join('');
 
-  const pills = [
-    { text: config.gaming.badge, level: config.gaming.level },
-    { text: config.gaming.rank },
-    { text: `${data.publicRepos} PUBLIC REPOS` },
-  ];
-  let x = 36;
-  const badges = pills
-    .map((p) => {
-      const icon = p.level ? 26 : 0;
-      const w = r1(textWidth(p.text, 11, 0.62) + 22 + icon);
-      const out = `<g transform="translate(${r1(x)} 360)"><rect width="${w}" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="${p.level ? '#ff5500' : '#fff'}" stroke-opacity="${p.level ? 0.8 : 0.22}"/>${
-        p.level ? `<circle cx="14" cy="13" r="9.5" fill="url(#level)"/><text x="14" y="17" text-anchor="middle" class="lvl">${p.level}</text>` : ''
-      }<text x="${11 + icon}" y="17.5" class="pill">${esc(p.text)}</text></g>`;
-      x += w + 8;
-      return out;
-    })
-    .join('');
+  const reposText = `${data.publicRepos} PUBLIC REPOS`;
+  const reposW = r1(textWidth(reposText, 11, 0.62) + 22);
+  const badges = `<g transform="translate(36 360)"><rect width="${reposW}" height="26" rx="13" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.22"/><text x="11" y="17.5" class="pill">${esc(reposText)}</text></g>`;
 
   return {
     css: `@keyframes line { 0% { opacity: 0; } ${r1(share * 0.1)}% { opacity: 1; } ${r1(share * 0.9)}% { opacity: 1; } ${r1(share)}% { opacity: 0; } 100% { opacity: 0; } }
@@ -194,7 +180,6 @@ export function hudSvg(config, data) {
 <radialGradient id="vignette" cx="0.5" cy="0.48" r="0.72"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.82"/></radialGradient>
 <linearGradient id="ctbox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4c7c"/><stop offset="1" stop-color="#172a47"/></linearGradient>
 <linearGradient id="tbox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b5424"/><stop offset="1" stop-color="#3a2d12"/></linearGradient>
-<linearGradient id="level" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a1a"/><stop offset="1" stop-color="#e2150c"/></linearGradient>
 <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" fill-opacity="0.035"/></pattern>
 <filter id="dof" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.8"/></filter>
 <filter id="lift" x="-10%" y="-40%" width="120%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.7"/></filter>
@@ -222,7 +207,6 @@ export function hudSvg(config, data) {
 .eyebrow { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
 .name { font: 700 66px ${HUD}; letter-spacing: 1px; fill: #fff; }
 .pill { font: 700 11px ${HUD}; letter-spacing: 1.2px; fill: #e8ebef; }
-.lvl { font: 800 11px ${HUD}; fill: #fff; }
 .hp { font: 700 30px ${HUD}; fill: ${C.white}; }
 .weapon { font: 700 12px ${HUD}; letter-spacing: 1px; fill: ${C.dim}; }
 .ammo { font: 700 30px ${HUD}; fill: ${C.white}; }

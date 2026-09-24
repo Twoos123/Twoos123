@@ -1,0 +1,22 @@
+{
+  "login": "Twoos123",
+  "name": "Asad Ali",
+  "site": "asadbinali.com",
+  "taglines": [
+    "Software Engineer · Ottawa, ON",
+    "Cloud Infrastructure Intern @ Sun Life",
+    "Building cs2-meta-engine"
+  ],
+  "gaming": {
+    "badge": "FACEIT LEVEL 10",
+    "level": 10,
+    "rank": "TOP 2,000 NA"
+  },
+  "hideRepos": ["Twoos123", "i-love-you", "seg3103_playground"],
+  "knife": "TypeScript",
+  "stack": {
+    "core": ["TypeScript", "Python", "Java", "React", "Next.js", "FastAPI", "Node.js", "Spring Boot", "Tailwind"],
+    "cloud": ["AWS", "Kubernetes", "Docker", "Terraform", "PostgreSQL", "Redis", "Linux", "Supabase"],
+    "exploring": ["Rust", "Go", "PyTorch", "Ansible", "Prometheus", "Grafana"]
+  }
+}

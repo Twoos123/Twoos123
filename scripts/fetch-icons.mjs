@@ -24,6 +24,7 @@ const FILES = {
   armor_helmet: 'hud/armor_helmet.svg',
   ct_logo: 'icons/ct_logo.svg',
   t_logo: 'icons/t_logo.svg',
+  agent_t: 'econ/characters/local_agent_t.svg',
 };
 
 const out = new URL('../icons/', import.meta.url);

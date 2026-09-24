@@ -49,9 +49,9 @@ export function ratingSvg(config, data) {
   const tiles = [
     ['CURRENT STREAK', `${data.current}`, 'days'],
     ['LONGEST STREAK', `${data.longest}`, 'days'],
-    ['CLUTCH DAY', `${data.busiest.contributionCount}`, busiest],
+    ['BEST DAY', `${data.busiest.contributionCount}`, busiest],
     ['PULL REQUESTS', `${data.pullRequests}`, 'this year'],
-    ['MAIN', top ? top.name : '—', top ? `${Math.round(top.share * 100)}% of code` : ''],
+    ['TOP LANGUAGE', top ? top.name : '—', top ? `${Math.round(top.share * 100)}% of code` : ''],
   ]
     .map(([label, value, sub], i) => {
       const x = 30 + i * 190;

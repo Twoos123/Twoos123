@@ -9,6 +9,8 @@ import { readFileSync } from 'node:fs';
 
 const DIR = new URL('../icons/', import.meta.url);
 const cache = new Map();
+// Icons drawn in the game as outlines, used here as solid silhouettes.
+const SOLID = new Set(['agent_t']);
 
 function load(name) {
   if (cache.has(name)) return cache.get(name);
@@ -36,6 +38,7 @@ function load(name) {
     .replace(/url\(#([^)]+)\)/g, `url(#${prefix}$1)`)
     // White parts take the colour given to each use of the icon.
     .replace(/(fill|stroke)="(#fff|#ffffff|white)"/gi, '$1="currentColor"');
+  if (SOLID.has(name)) inner = inner.replace(/fill="none"/g, 'fill="currentColor"').replace(/stroke="#[0-9a-f]{3,6}"/gi, 'stroke="currentColor"');
   // Whitespace only: the coordinates keep their precision, because the outlines are drawn
   // in thousands of tiny relative steps and any rounding drifts them out of shape.
   inner = inner.replace(/\s+/g, ' ').replace(/>\s+</g, '><').trim();

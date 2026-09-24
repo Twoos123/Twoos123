@@ -136,7 +136,7 @@ ${reelCards}
 <path d="M${W / 2 - 8} ${REEL_Y + REEL_H}H${W / 2 + 8}L${W / 2} ${REEL_Y + REEL_H - 10}Z" fill="#e4ae39"/>
 <g class="win">
 <text x="${W / 2}" y="${REEL_Y + REEL_H + 32}" text-anchor="middle" class="reveal">${esc(knife ? `${knife.weapon} | ${knife.skill}` : '')}</text>
-<text x="${W / 2}" y="${REEL_Y + REEL_H + 50}" text-anchor="middle" class="revealsub">${esc(RARITY.gold.name.toUpperCase())} · MAIN STACK</text>
+<text x="${W / 2}" y="${REEL_Y + REEL_H + 50}" text-anchor="middle" class="revealsub">MAIN STACK</text>
 </g>
 ${grid}`;
 

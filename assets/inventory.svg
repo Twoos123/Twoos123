@@ -346,7 +346,7 @@
 <path d="M492 238H508L500 228Z" fill="#e4ae39"/>
 <g class="win">
 <text x="500" y="270" text-anchor="middle" class="reveal">★ Karambit | TypeScript</text>
-<text x="500" y="288" text-anchor="middle" class="revealsub">★ RARE SPECIAL ITEM · MAIN STACK</text>
+<text x="500" y="288" text-anchor="middle" class="revealsub">MAIN STACK</text>
 </g>
 <g><g transform="translate(24 330)">
 <rect width="112" height="88" rx="4" fill="url(#cardbg)"/>

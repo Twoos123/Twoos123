@@ -30,8 +30,8 @@
 
 <rect width="1000" height="574" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="999" height="573" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
-<text x="30" y="46" class="map">de_github</text>
-<text x="30" y="66" class="mapsub">SCOREBOARD · 19 PUBLIC REPOS · TOP 5 PER TEAM</text>
+<text x="30" y="46" class="map">Scoreboard</text>
+<text x="30" y="66" class="mapsub">19 PUBLIC REPOS · TOP 5 PER GROUP</text>
 
 <text x="68" y="84" class="head">REPO</text>
 <text x="410" y="84" class="head">LANGUAGE</text>
@@ -43,7 +43,7 @@
 
 <rect x="30" y="92" width="940" height="38" fill="url(#ctbar)"/>
 <use href="#i-ct_logo" x="38" y="97" width="28" height="28" style="color:#fff" />
-<text x="76" y="117" class="team" fill="#b8d2f5">COUNTER-TERRORISTS · WEB</text>
+<text x="76" y="117" class="team" fill="#b8d2f5">WEB</text>
 <text x="955" y="119" text-anchor="end" class="teamscore" fill="#b8d2f5">467</text>
 <text x="900" y="116" text-anchor="end" class="small" fill="#b8d2f5">COMMITS</text>
 <g>
@@ -109,7 +109,7 @@
 
 <rect x="30" y="320" width="940" height="38" fill="url(#tbar)"/>
 <use href="#i-t_logo" x="38" y="325" width="28" height="28" style="color:#fff" />
-<text x="76" y="345" class="team" fill="#f1d496">TERRORISTS · SYSTEMS &amp; DATA</text>
+<text x="76" y="345" class="team" fill="#f1d496">SYSTEMS &amp; DATA</text>
 <text x="955" y="347" text-anchor="end" class="teamscore" fill="#f1d496">451</text>
 <text x="900" y="344" text-anchor="end" class="small" fill="#f1d496">COMMITS</text>
 <g>

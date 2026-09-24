@@ -83,11 +83,11 @@ export function scoreboardSvg(config, data) {
   const body = `
 <rect width="${W}" height="${H}" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
-<text x="30" y="46" class="map">de_github</text>
-<text x="30" y="66" class="mapsub">SCOREBOARD · ${data.publicRepos} PUBLIC REPOS · TOP ${PER_TEAM} PER TEAM</text>
+<text x="30" y="46" class="map">Scoreboard</text>
+<text x="30" y="66" class="mapsub">${data.publicRepos} PUBLIC REPOS · TOP ${PER_TEAM} PER GROUP</text>
 ${cols(84)}
-${team(icons, 'ct_logo', web, 30, yWeb, 'COUNTER-TERRORISTS · WEB', C.ct, C.ctText, 'ctbar')}
-${team(icons, 't_logo', systems, 30, ySys, 'TERRORISTS · SYSTEMS &amp; DATA', C.t, C.tText, 'tbar')}
+${team(icons, 'ct_logo', web, 30, yWeb, 'WEB', C.ct, C.ctText, 'ctbar')}
+${team(icons, 't_logo', systems, 30, ySys, 'SYSTEMS &amp; DATA', C.t, C.tText, 'tbar')}
 <text x="30" y="${H - 18}" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · SCORE = K + 25 × A</text>`;
 
   return svg(W, H, `${config.name}'s repositories as a scoreboard: commits, stars and days since the last push`, defs + icons.defs(), style, body);

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="1000" height="170" role="img" aria-label="GG WP. Visit asadbinali.com for the full portfolio">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="1000" height="170" role="img" aria-label="Visit asadbinali.com for the full portfolio">
 <defs>
 <clipPath id="frame"><rect width="1000" height="170" rx="14"/></clipPath>
 
@@ -10,7 +10,7 @@
 </defs>
 <style>
 
-.gg { font: italic 800 64px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 4px; }
+.gg { font: 800 48px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 2px; }
 .cta { font: 700 17px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 1px; fill: #fff; }
 .sub { font: 600 11px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 2px; fill: #9aa5b1; }
 .bar { animation: bar 3s ease-in-out infinite alternate; }
@@ -23,8 +23,8 @@
 <rect x="0.5" y="0.5" width="999" height="169" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
 <rect x="0" y="0" width="1000" height="3" fill="#6f9ce6" class="bar"/>
 <rect x="500" y="0" width="500" height="3" fill="#e3b04b" class="bar"/>
-<text x="500" y="84" text-anchor="middle" class="gg" fill="url(#gg)">GG WP</text>
-<text x="500" y="118" text-anchor="middle" class="cta">Queue up for the full match → asadbinali.com</text>
-<text x="500" y="146" text-anchor="middle" class="sub">MVP THIS ROUND: ASADALI-PORTFOLIO · EVERYTHING ABOVE REFRESHES DAILY FROM MY GITHUB</text>
+<text x="500" y="80" text-anchor="middle" class="gg" fill="url(#gg)">asadbinali.com</text>
+<text x="500" y="114" text-anchor="middle" class="cta">Projects, case studies, experience and resume</text>
+<text x="500" y="144" text-anchor="middle" class="sub">EVERYTHING ABOVE IS UPDATED DAILY FROM MY GITHUB</text>
 </g>
 </svg>

@@ -31,7 +31,7 @@ const files = {
   'scoreboard.svg': scoreboardSvg(config, data),
   'inventory.svg': inventorySvg(config),
   'rating.svg': ratingSvg(config, data),
-  'gg.svg': ggSvg(config, data),
+  'gg.svg': ggSvg(config),
 };
 for (const [name, content] of Object.entries(files)) await writeFile(new URL(name, out), content);
 console.log(`Drew ${Object.keys(files).length} SVGs: ${data.total} contributions, ${data.feed.length} killfeed entries, ${data.repos.length} repos.`);

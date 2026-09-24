@@ -20,7 +20,7 @@ const SCENE = `
 <g filter="url(#dof)">
 <rect width="${W}" height="200" fill="url(#sky)"/>
 <rect x="560" y="138" width="300" height="194" fill="url(#farwall)"/>
-<path d="M660 332V236A50 50 0 0 1 760 236V332Z" fill="#08090b"/>
+<path d="M660 332V236A50 50 0 0 1 760 236V332Z" fill="url(#doorlight)"/>
 <path d="M660 332V236A50 50 0 0 1 760 236V332" fill="none" stroke="#6b5a45" stroke-width="5"/>
 <polygon points="0,64 560,138 560,332 0,${H}" fill="url(#wall)"/>
 <polygon points="${W},52 860,138 860,332 ${W},${H}" fill="url(#wallR)"/>
@@ -30,25 +30,18 @@ const SCENE = `
 <ellipse cx="710" cy="300" rx="190" ry="100" fill="url(#doorglow)"/>
 </g>`;
 
-// A beetle in the doorway, and the crosshair that keeps finding it.
+// A T agent crossing the doorway, and the crosshair that keeps finding his head. The agent
+// is drawn 76px tall with his feet on the doorway floor and his head at (0, -32).
 const target = (icons) => `
 <g transform="translate(710 300)">
-<g class="bug">
-<g stroke="#101010" stroke-width="2.4" stroke-linecap="round">
-<path d="M-9 -4L-20 -10M-10 3L-22 3M-9 9L-19 17M9 -4L20 -10M10 3L22 3M9 9L19 17"/>
-<path d="M-3 -24L-8 -32M3 -24L8 -32" stroke-width="1.6"/>
-</g>
-<ellipse cx="0" cy="3" rx="12" ry="15" fill="#161616"/>
-<path d="M0 -11V17" stroke="#2b2b2b" stroke-width="1.4"/>
-<circle cx="0" cy="-17" r="7" fill="#161616"/>
-</g>
+<g class="agent">${icons.use('agent_t', -36.1, -41.6, 76, '#15120f')}</g>
 <g class="crosshair">
 <g stroke="#000" stroke-width="4" stroke-opacity="0.55"><path d="M-14 0H-5M5 0H14M0 -14V-5M0 5V14"/></g>
 <g stroke="#46f04a" stroke-width="2"><path d="M-14 0H-5M5 0H14M0 -14V-5M0 5V14"/></g>
 <circle r="1.4" fill="#46f04a"/>
 </g>
 <g class="hitmarker" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M-12 -12L-6 -6M12 -12L6 -6M-12 12L-6 6M12 12L6 6"/></g>
-<g class="hs">${icons.use('headshot', -12, -66, 24, C.red)}</g>
+<g class="hs">${icons.use('headshot', -12, -84, 24, C.red)}</g>
 </g>`;
 
 function radar() {
@@ -184,7 +177,7 @@ ${icons.use(weaponFor(weapon.language), r1(982 - icons.width(weaponFor(weapon.la
 <text x="982" y="398" text-anchor="end" class="weapon">${esc(weapon.name)}</text>
 <text x="${r1(982 - reserveW - 6)}" y="430" text-anchor="end" class="ammo">${weapon.commits}</text>
 <text x="982" y="430" text-anchor="end" class="reserve">${esc(reserve)}</text>
-<text x="${W / 2}" y="430" text-anchor="middle" class="caption">killfeed · score · money · ammo = my live GitHub activity, refreshed daily</text>`;
+<text x="${W / 2}" y="430" text-anchor="middle" class="caption">live GitHub data · updated daily</text>`;
 }
 
 export function hudSvg(config, data) {
@@ -196,6 +189,7 @@ export function hudSvg(config, data) {
 <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#231e19"/><stop offset="1" stop-color="#40372c"/></linearGradient>
 <linearGradient id="wallR" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#1f1a16"/><stop offset="1" stop-color="#3a3128"/></linearGradient>
 <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#524737"/><stop offset="1" stop-color="#241f19"/></linearGradient>
+<linearGradient id="doorlight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d3a0"/><stop offset="1" stop-color="#b08555"/></linearGradient>
 <radialGradient id="doorglow"><stop offset="0" stop-color="#f7b96a" stop-opacity="0.32"/><stop offset="1" stop-color="#f7b96a" stop-opacity="0"/></radialGradient>
 <radialGradient id="vignette" cx="0.5" cy="0.48" r="0.72"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.82"/></radialGradient>
 <linearGradient id="ctbox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4c7c"/><stop offset="1" stop-color="#172a47"/></linearGradient>
@@ -234,13 +228,13 @@ export function hudSvg(config, data) {
 .ammo { font: 700 30px ${HUD}; fill: ${C.white}; }
 .reserve { font: 700 16px ${HUD}; fill: ${C.dim}; }
 .caption { font: 600 10px ${HUD}; letter-spacing: 1px; fill: #fff; fill-opacity: 0.4; }
-/* Every 6s the bug scuttles across the doorway, the crosshair catches up, and it's a headshot. */
-.bug { transform-box: fill-box; transform-origin: center; animation: bug 6s ease-in-out infinite; }
-@keyframes bug { 0% { transform: translateX(-34px); opacity: 1; } 42% { transform: translateX(30px); opacity: 1; } 46% { transform: translateX(30px) rotate(0deg); opacity: 1; } 54% { transform: translate(30px, 14px) rotate(170deg); opacity: 0; } 76% { transform: translateX(-34px); opacity: 0; } 82% { transform: translateX(-34px); opacity: 1; } 100% { transform: translateX(-34px); opacity: 1; } }
+/* Every 6s the agent strafes across the doorway, the crosshair catches up: headshot. */
+.agent { transform-box: fill-box; transform-origin: 50% 100%; animation: agent 6s ease-in-out infinite; }
+@keyframes agent { 0% { transform: translateX(-34px); opacity: 1; } 42% { transform: translateX(30px); opacity: 1; } 46% { transform: translateX(30px) rotate(0deg); opacity: 1; } 56% { transform: translateX(34px) rotate(-78deg); opacity: 0; } 76% { transform: translateX(-34px); opacity: 0; } 82% { transform: translateX(-34px); opacity: 1; } 100% { transform: translateX(-34px); opacity: 1; } }
 .crosshair { animation: aim 6s ease-in-out infinite; }
-@keyframes aim { 0% { transform: translate(-12px, -8px); } 38% { transform: translate(24px, -10px); } 44% { transform: translate(30px, -17px); } 46% { transform: translate(30px, -26px); } 52% { transform: translate(30px, -17px); } 80% { transform: translate(-20px, -6px); } 100% { transform: translate(-12px, -8px); } }
+@keyframes aim { 0% { transform: translate(-12px, -26px); } 38% { transform: translate(24px, -28px); } 44% { transform: translate(30px, -32px); } 46% { transform: translate(30px, -41px); } 52% { transform: translate(30px, -32px); } 80% { transform: translate(-20px, -24px); } 100% { transform: translate(-12px, -26px); } }
 .hitmarker { opacity: 0; animation: hit 6s linear infinite; }
-@keyframes hit { 0%, 44% { opacity: 0; transform: translate(30px, -17px) scale(0.8); } 45% { opacity: 1; transform: translate(30px, -17px) scale(1); } 52% { opacity: 0; transform: translate(30px, -17px) scale(1.3); } 100% { opacity: 0; transform: translate(30px, -17px) scale(1.3); } }
+@keyframes hit { 0%, 44% { opacity: 0; transform: translate(30px, -32px) scale(0.8); } 45% { opacity: 1; transform: translate(30px, -32px) scale(1); } 52% { opacity: 0; transform: translate(30px, -32px) scale(1.3); } 100% { opacity: 0; transform: translate(30px, -32px) scale(1.3); } }
 .hs { opacity: 0; animation: hs 6s ease-out infinite; }
 @keyframes hs { 0%, 45% { opacity: 0; transform: translate(30px, 0); } 47% { opacity: 1; transform: translate(30px, 0); } 62% { opacity: 0; transform: translate(30px, -26px); } 100% { opacity: 0; transform: translate(30px, -26px); } }
 ${card.css}

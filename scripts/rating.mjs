@@ -1,23 +1,14 @@
-// rating.svg: a year of contributions as a rating graph, with a tier-coloured plate for
-// the total and end-of-match style stat tiles.
+// rating.svg: a year of contributions as a rating graph, with a gold rating plate for the
+// total and end-of-match style stat tiles.
 
 import { C, HUD, esc, r1, smooth, svg, textWidth } from './lib.mjs';
 
 const W = 1000;
 const H = 360;
-// Plate colour by yearly contributions, in the style of competitive rating tiers.
-const TIERS = [
-  [250, '#b0c3d9'],
-  [500, '#8cc6ff'],
-  [1000, '#4b69ff'],
-  [1500, '#8847ff'],
-  [2000, '#d32ce6'],
-  [3000, '#eb4b4b'],
-  [Infinity, '#e4ae39'],
-];
+const GOLD = '#e4ae39';
 
 export function ratingSvg(config, data) {
-  const tier = TIERS.find(([limit]) => data.total < limit)[1];
+  const tier = GOLD;
   const X0 = 300;
   const X1 = 966;
   const Y0 = 58;
@@ -51,7 +42,7 @@ export function ratingSvg(config, data) {
     ['LONGEST STREAK', `${data.longest}`, 'days'],
     ['BEST DAY', `${data.busiest.contributionCount}`, busiest],
     ['PULL REQUESTS', `${data.pullRequests}`, 'this year'],
-    ['TOP LANGUAGE', top ? top.name : '—', top ? `${Math.round(top.share * 100)}% of code` : ''],
+    ['TOP LANGUAGE', top ? top.name : '—', top ? `${Math.round(top.share * 100)}%` : ''],
   ]
     .map(([label, value, sub], i) => {
       const x = 30 + i * 190;
@@ -81,12 +72,12 @@ export function ratingSvg(config, data) {
   const defs = `
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11161d"/><stop offset="1" stop-color="#0a0d12"/></linearGradient>
 <linearGradient id="area" x1="0" y1="${Y0}" x2="0" y2="${Y1}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${tier}" stop-opacity="0.35"/><stop offset="1" stop-color="${tier}" stop-opacity="0"/></linearGradient>
-<linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${tier}"/><stop offset="1" stop-color="${tier}" stop-opacity="0.55"/></linearGradient>
+<linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d27a"/><stop offset="0.55" stop-color="${GOLD}"/><stop offset="1" stop-color="#a87a22"/></linearGradient>
 <clipPath id="barclip"><rect x="30" y="322" width="940" height="6" rx="3"/></clipPath>`;
 
   const style = `
 .eyebrow { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
-.rating { font: italic 800 46px ${HUD}; fill: #fff; letter-spacing: 1px; }
+.rating { font: italic 800 46px ${HUD}; fill: #1a1305; letter-spacing: 1px; }
 .platelabel { font: 700 10px ${HUD}; letter-spacing: 2px; fill: ${C.dim}; }
 .grid { stroke: #fff; stroke-opacity: 0.06; }
 .axis { font: 600 10px ${HUD}; fill: ${C.dim}; fill-opacity: 0.8; }

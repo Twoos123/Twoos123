@@ -19,7 +19,7 @@
 .lang { font: 600 12px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #9aa5b1; }
 .num { font: 700 15px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #d7dde4; }
 .num.dim { fill: #9aa5b1; }
-.num.strong { fill: #fff; }
+.rating { font: italic 800 13px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #e4ae39; }
 .mvp { font: 700 17px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; fill: #e4ae39; transform-box: fill-box; transform-origin: center; animation: mvp 2.4s ease-in-out infinite alternate; }
 @keyframes mvp { from { opacity: 0.6; transform: scale(0.9); } to { opacity: 1; transform: scale(1.15); } }
 .legend { font: 600 10px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 1px; fill: #fff; fill-opacity: 0.4; }
@@ -31,7 +31,7 @@
 <rect width="1000" height="574" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="999" height="573" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
 <text x="30" y="46" class="map">Scoreboard</text>
-<text x="30" y="66" class="mapsub">19 PUBLIC REPOS · TOP 5 PER GROUP</text>
+<text x="30" y="66" class="mapsub">19 PUBLIC REPOS · TOP 5 PER TEAM</text>
 
 <text x="68" y="84" class="head">REPO</text>
 <text x="410" y="84" class="head">LANGUAGE</text>
@@ -39,11 +39,11 @@
 <text x="700" y="84" text-anchor="end" class="head">A</text>
 <text x="790" y="84" text-anchor="end" class="head">PING</text>
 <text x="860" y="84" text-anchor="middle" class="head">MVP</text>
-<text x="955" y="84" text-anchor="end" class="head">SCORE</text>
+<text x="955" y="84" text-anchor="end" class="head">RATING</text>
 
 <rect x="30" y="92" width="940" height="38" fill="url(#ctbar)"/>
 <use href="#i-ct_logo" x="38" y="97" width="28" height="28" style="color:#fff" />
-<text x="76" y="117" class="team" fill="#b8d2f5">WEB</text>
+<text x="76" y="117" class="team" fill="#b8d2f5">CT · WEB</text>
 <text x="955" y="119" text-anchor="end" class="teamscore" fill="#b8d2f5">467</text>
 <text x="900" y="116" text-anchor="end" class="small" fill="#b8d2f5">COMMITS</text>
 <g>
@@ -56,7 +56,7 @@
 <text x="700" y="157.5" text-anchor="end" class="num">1</text>
 <text x="790" y="157.5" text-anchor="end" class="num dim">448d</text>
 <text x="860" y="158" text-anchor="middle" class="mvp">★</text>
-<text x="955" y="157.5" text-anchor="end" class="num strong">258</text>
+<g transform="translate(890 142.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">258</text></g>
 </g>
 <g>
 <rect x="30" y="170" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
@@ -68,7 +68,7 @@
 <text x="700" y="189.5" text-anchor="end" class="num">2</text>
 <text x="790" y="189.5" text-anchor="end" class="num dim">0d</text>
 
-<text x="955" y="189.5" text-anchor="end" class="num strong">183</text>
+<g transform="translate(890 174.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">183</text></g>
 </g>
 <g>
 <rect x="30" y="202" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
@@ -80,7 +80,7 @@
 <text x="700" y="221.5" text-anchor="end" class="num">6</text>
 <text x="790" y="221.5" text-anchor="end" class="num dim">80d</text>
 
-<text x="955" y="221.5" text-anchor="end" class="num strong">181</text>
+<g transform="translate(890 206.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">181</text></g>
 </g>
 <g>
 <rect x="30" y="234" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
@@ -92,7 +92,7 @@
 <text x="700" y="253.5" text-anchor="end" class="num">1</text>
 <text x="790" y="253.5" text-anchor="end" class="num dim">483d</text>
 
-<text x="955" y="253.5" text-anchor="end" class="num strong">76</text>
+<g transform="translate(890 238.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">76</text></g>
 </g>
 <g>
 <rect x="30" y="266" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
@@ -104,12 +104,12 @@
 <text x="700" y="285.5" text-anchor="end" class="num">1</text>
 <text x="790" y="285.5" text-anchor="end" class="num dim">744d</text>
 
-<text x="955" y="285.5" text-anchor="end" class="num strong">44</text>
+<g transform="translate(890 270.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">44</text></g>
 </g>
 
 <rect x="30" y="320" width="940" height="38" fill="url(#tbar)"/>
 <use href="#i-t_logo" x="38" y="325" width="28" height="28" style="color:#fff" />
-<text x="76" y="345" class="team" fill="#f1d496">SYSTEMS &amp; DATA</text>
+<text x="76" y="345" class="team" fill="#f1d496">T · SYSTEMS &amp; DATA</text>
 <text x="955" y="347" text-anchor="end" class="teamscore" fill="#f1d496">451</text>
 <text x="900" y="344" text-anchor="end" class="small" fill="#f1d496">COMMITS</text>
 <g>
@@ -122,7 +122,7 @@
 <text x="700" y="385.5" text-anchor="end" class="num">1</text>
 <text x="790" y="385.5" text-anchor="end" class="num dim">0d</text>
 <text x="860" y="386" text-anchor="middle" class="mvp">★</text>
-<text x="955" y="385.5" text-anchor="end" class="num strong">388</text>
+<g transform="translate(890 370.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">388</text></g>
 </g>
 <g>
 <rect x="30" y="398" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
@@ -134,7 +134,7 @@
 <text x="700" y="417.5" text-anchor="end" class="num">1</text>
 <text x="790" y="417.5" text-anchor="end" class="num dim">1038d</text>
 
-<text x="955" y="417.5" text-anchor="end" class="num strong">61</text>
+<g transform="translate(890 402.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">61</text></g>
 </g>
 <g>
 <rect x="30" y="430" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
@@ -146,7 +146,7 @@
 <text x="700" y="449.5" text-anchor="end" class="num">0</text>
 <text x="790" y="449.5" text-anchor="end" class="num dim">8d</text>
 
-<text x="955" y="449.5" text-anchor="end" class="num strong">43</text>
+<g transform="translate(890 434.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">43</text></g>
 </g>
 <g>
 <rect x="30" y="462" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
@@ -158,7 +158,7 @@
 <text x="700" y="481.5" text-anchor="end" class="num">1</text>
 <text x="790" y="481.5" text-anchor="end" class="num dim">742d</text>
 
-<text x="955" y="481.5" text-anchor="end" class="num strong">29</text>
+<g transform="translate(890 466.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">29</text></g>
 </g>
 <g>
 <rect x="30" y="494" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
@@ -170,8 +170,8 @@
 <text x="700" y="513.5" text-anchor="end" class="num">0</text>
 <text x="790" y="513.5" text-anchor="end" class="num dim">1038d</text>
 
-<text x="955" y="513.5" text-anchor="end" class="num strong">5</text>
+<g transform="translate(890 498.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">5</text></g>
 </g>
-<text x="30" y="556" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · SCORE = K + 25 × A</text>
+<text x="30" y="556" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · RATING = K + 25 × A</text>
 </g>
 </svg>

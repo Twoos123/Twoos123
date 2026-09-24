@@ -1,5 +1,6 @@
-// scoreboard.svg: my repos as the Tab scoreboard. Two teams by language, kills = commits,
-// assists = stars, ping = days since the last push, and the top scorer is MVP.
+// scoreboard.svg: my repos as the Tab scoreboard. Two teams by language (CT: web, T: systems
+// and data), kills = commits, assists = stars, ping = days since the last push, and each repo
+// has a gold rating plate. The top-rated repo on each team is MVP.
 
 import { C, HUD, esc, svg } from './lib.mjs';
 import { iconSet } from './icons.mjs';
@@ -10,6 +11,10 @@ const ROW = 32;
 const PER_TEAM = 5;
 
 const score = (repo) => repo.commits + 25 * repo.stars;
+
+// A gold rating plate, like the ones next to players on the Premier scoreboard.
+const plate = (x, y, value) =>
+  `<g transform="translate(${x} ${y})"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">${value.toLocaleString('en-US')}</text></g>`;
 
 function team(icons, logo, repos, x, y, title, color, text, bar) {
   const rows = repos
@@ -26,7 +31,7 @@ function team(icons, logo, repos, x, y, title, color, text, bar) {
 <text x="${x + 670}" y="${top + 19.5}" text-anchor="end" class="num">${repo.stars}</text>
 <text x="${x + 760}" y="${top + 19.5}" text-anchor="end" class="num dim">${repo.days}d</text>
 ${mvp ? `<text x="${x + 830}" y="${top + 20}" text-anchor="middle" class="mvp">★</text>` : ''}
-<text x="${x + 925}" y="${top + 19.5}" text-anchor="end" class="num strong">${score(repo)}</text>
+${plate(x + 860, top + 4.5, score(repo))}
 </g>`;
     })
     .join('\n');
@@ -65,7 +70,7 @@ export function scoreboardSvg(config, data) {
 .lang { font: 600 12px ${HUD}; fill: ${C.dim}; }
 .num { font: 700 15px ${HUD}; fill: #d7dde4; }
 .num.dim { fill: ${C.dim}; }
-.num.strong { fill: #fff; }
+.rating { font: italic 800 13px ${HUD}; fill: #e4ae39; }
 .mvp { font: 700 17px ${HUD}; fill: #e4ae39; transform-box: fill-box; transform-origin: center; animation: mvp 2.4s ease-in-out infinite alternate; }
 @keyframes mvp { from { opacity: 0.6; transform: scale(0.9); } to { opacity: 1; transform: scale(1.15); } }
 .legend { font: 600 10px ${HUD}; letter-spacing: 1px; fill: #fff; fill-opacity: 0.4; }
@@ -78,17 +83,17 @@ export function scoreboardSvg(config, data) {
 <text x="700" y="${y}" text-anchor="end" class="head">A</text>
 <text x="790" y="${y}" text-anchor="end" class="head">PING</text>
 <text x="860" y="${y}" text-anchor="middle" class="head">MVP</text>
-<text x="955" y="${y}" text-anchor="end" class="head">SCORE</text>`;
+<text x="955" y="${y}" text-anchor="end" class="head">RATING</text>`;
 
   const body = `
 <rect width="${W}" height="${H}" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
 <text x="30" y="46" class="map">Scoreboard</text>
-<text x="30" y="66" class="mapsub">${data.publicRepos} PUBLIC REPOS · TOP ${PER_TEAM} PER GROUP</text>
+<text x="30" y="66" class="mapsub">${data.publicRepos} PUBLIC REPOS · TOP ${PER_TEAM} PER TEAM</text>
 ${cols(84)}
-${team(icons, 'ct_logo', web, 30, yWeb, 'WEB', C.ct, C.ctText, 'ctbar')}
-${team(icons, 't_logo', systems, 30, ySys, 'SYSTEMS &amp; DATA', C.t, C.tText, 'tbar')}
-<text x="30" y="${H - 18}" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · SCORE = K + 25 × A</text>`;
+${team(icons, 'ct_logo', web, 30, yWeb, 'CT · WEB', C.ct, C.ctText, 'ctbar')}
+${team(icons, 't_logo', systems, 30, ySys, 'T · SYSTEMS &amp; DATA', C.t, C.tText, 'tbar')}
+<text x="30" y="${H - 18}" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · RATING = K + 25 × A</text>`;
 
   return svg(W, H, `${config.name}'s repositories as a scoreboard: commits, stars and days since the last push`, defs + icons.defs(), style, body);
 }

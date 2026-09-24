@@ -1,5 +1,7 @@
-// Live GitHub data for the profile: repositories, the contribution calendar, and recent
-// public activity (for the killfeed).
+// Live data for the profile: repositories, the contribution calendar and recent public
+// activity (for the killfeed) from GitHub, plus my experience, "currently" rows, resume link
+// and company logos from the portfolio's content, so edits made on asadbinali.com show up
+// here too.
 
 const QUERY = `query($login: String!) {
   user(login: $login) {
@@ -75,8 +77,24 @@ function killfeed(list, login) {
   return out.slice(0, 5);
 }
 
+// The portfolio's content files and logos, read from its public repo.
+async function siteContent({ repo, dir }) {
+  const get = async (path) => {
+    const res = await fetch(`https://raw.githubusercontent.com/${repo}/HEAD/${dir}/${path}`);
+    if (!res.ok) throw new Error(`${repo}/${dir}/${path}: ${res.status}`);
+    return res;
+  };
+  const [experience, about, resume] = await Promise.all(['experience', 'about', 'resume'].map((name) => get(`src/content/${name}.json`).then((r) => r.json())));
+  const logos = {};
+  for (const entry of experience.entries) {
+    const file = (entry.logo || '').split('?')[0];
+    if (file && !logos[file]) logos[file] = await (await get(`public${file}`)).text();
+  }
+  return { experience: experience.entries, currently: about.currently.rows, resumeUrl: resume.links.view, logos };
+}
+
 export async function loadData(config, token) {
-  const [user, activity] = await Promise.all([graphql(config.login, token), events(config.login, token)]);
+  const [user, activity, site] = await Promise.all([graphql(config.login, token), events(config.login, token), siteContent(config.siteContent)]);
   const hidden = new Set(config.hideRepos || []);
   const now = Date.now();
   const repos = user.repositories.nodes
@@ -137,5 +155,6 @@ export async function loadData(config, token) {
     pullRequests: user.contributionsCollection.totalPullRequestContributions,
     feed,
     today: days[days.length - 1].date,
+    site,
   };
 }

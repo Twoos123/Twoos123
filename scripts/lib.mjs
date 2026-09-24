@@ -64,10 +64,10 @@ export const textWidth = (text, size, factor = 0.56) => String(text).length * si
 export const frame = (w, h, radius = 14) => `<clipPath id="frame"><rect width="${w}" height="${h}" rx="${radius}"/></clipPath>`;
 export const REDUCED = '@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }';
 
-export function svg(w, h, label, defs, style, body) {
+export function svg(w, h, label, defs, style, body, radius = 14) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(label)}">
 <defs>
-${frame(w, h)}
+${frame(w, h, radius)}
 ${defs}
 </defs>
 <style>

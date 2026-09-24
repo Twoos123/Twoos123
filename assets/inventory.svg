@@ -48,6 +48,9 @@
 .win { animation: win 12s infinite; }
 @keyframes win { 0%, 27% { opacity: 1; } 30%, 88% { opacity: 0; } 91%, 100% { opacity: 1; } }
 .reveal { font: 700 17px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 0.5px; fill: #e4ae39; }
+/* While the reel spins (the rest of the time the knife's name shows here). */
+.opening { font: 700 11px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 3px; fill: #9aa5b1; opacity: 0; animation: opening 12s infinite; }
+@keyframes opening { 0%, 29% { opacity: 0; } 33%, 86% { opacity: 1; } 89%, 100% { opacity: 0; } }
 .revealsub { font: 600 10px Bahnschrift, 'DIN Alternate', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', sans-serif; letter-spacing: 2px; fill: #9aa5b1; }
 .shine { animation: shine 3.2s ease-in-out infinite; }
 @keyframes shine { 0% { transform: translateX(0); } 60%, 100% { transform: translateX(220px); } }
@@ -344,6 +347,7 @@
 <path d="M500 92V234" stroke="#e4ae39" stroke-width="2"/>
 <path d="M492 88H508L500 98Z" fill="#e4ae39"/>
 <path d="M492 238H508L500 228Z" fill="#e4ae39"/>
+<text x="500" y="278" text-anchor="middle" class="opening">OPENING CASE…</text>
 <g class="win">
 <text x="500" y="270" text-anchor="middle" class="reveal">★ Karambit | TypeScript</text>
 <text x="500" y="288" text-anchor="middle" class="revealsub">MAIN STACK</text>

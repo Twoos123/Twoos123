@@ -12,9 +12,18 @@ const cache = new Map();
 // Icons drawn in the game as outlines, used here as solid silhouettes.
 const SOLID = new Set(['agent_t']);
 
+// Adds an SVG from elsewhere (e.g. a company logo fetched from the portfolio) under `name`.
+export function registerIcon(name, text) {
+  cache.set(name, parse(name, text));
+}
+
 function load(name) {
-  if (cache.has(name)) return cache.get(name);
-  let text = readFileSync(new URL(`${name}.svg`, DIR), 'utf8')
+  if (!cache.has(name)) cache.set(name, parse(name, readFileSync(new URL(`${name}.svg`, DIR), 'utf8')));
+  return cache.get(name);
+}
+
+function parse(name, source) {
+  let text = source
     .replace(/<\?xml[^>]*>/g, '')
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<!DOCTYPE[^>]*>/g, '');
@@ -36,8 +45,9 @@ function load(name) {
     .replace(/\sid="([^"]+)"/g, ` id="${prefix}$1"`)
     .replace(/(xlink:href|href)="#([^"]+)"/g, `href="#${prefix}$2"`)
     .replace(/url\(#([^)]+)\)/g, `url(#${prefix}$1)`)
-    // White parts take the colour given to each use of the icon.
-    .replace(/(fill|stroke)="(#fff|#ffffff|white)"/gi, '$1="currentColor"');
+    // White parts take the colour given to each use of the icon (but not inside masks,
+    // where white means "visible").
+    .replace(/<mask[\s\S]*?<\/mask>|(fill|stroke)="(#fff|#ffffff|white)"/gi, (m, attr) => (attr ? `${attr}="currentColor"` : m));
   if (SOLID.has(name)) inner = inner.replace(/fill="none"/g, 'fill="currentColor"').replace(/stroke="#[0-9a-f]{3,6}"/gi, 'stroke="currentColor"');
   // Whitespace only: the coordinates keep their precision, because the outlines are drawn
   // in thousands of tiny relative steps and any rounding drifts them out of shape.
@@ -49,9 +59,7 @@ function load(name) {
     nested.push(s);
     return '';
   });
-  const icon = { viewBox, inner, nested: nested.join(''), ratio: vw / vh };
-  cache.set(name, icon);
-  return icon;
+  return { viewBox, inner, nested: nested.join(''), ratio: vw / vh };
 }
 
 export function iconSet() {

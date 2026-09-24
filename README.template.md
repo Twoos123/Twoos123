@@ -5,12 +5,12 @@
 
 <p align="center">
   <a href="https://asadbinali.com"><img src="assets/btn-portfolio.svg" height="56" alt="Portfolio: asadbinali.com" /></a>
-  <a href="https://drive.google.com/file/d/17k-FbUlKWx263njOeZHt0rcvE-LiNiSi/view"><img src="assets/btn-resume.svg" height="56" alt="Resume (PDF)" /></a>
+  <a href="{{resume_url}}"><img src="assets/btn-resume.svg" height="56" alt="Resume (PDF)" /></a>
   <a href="https://linkedin.com/in/asadbinali/"><img src="assets/btn-linkedin.svg" height="56" alt="LinkedIn: asadbinali" /></a>
   <a href="mailto:masadbali190@gmail.com"><img src="assets/btn-email.svg" height="56" alt="Email: masadbali190@gmail.com" /></a>
 </p>
 
-<img src="assets/about.svg" width="100%" alt="Asad Ali. uOttawa · Software Engineering (CO-OP) · Dec 2026. Role: Cloud Infrastructure Analyst Intern - DevOps @ Sun Life. Building: CS2 Meta Engine. Learning: AI workflows &amp; LLMs in production. Based in: Ottawa, Ontario. Grinding: CS2, Level 10 Faceit (Top 2,000 NA). Looking for: Software Engineer · Seeking New Grad Roles, Available Dec 2026, Ottawa · Toronto · Montreal · Vancouver · Remote. Experience: Sun Life (Cloud Infrastructure Analyst Intern · DevOps, Sep 2026 - Dec 2026); Health Canada (Software Engineer Intern · Fullstack, May 2026 - Aug 2026); University of Ottawa (Software Engineer Intern · Fullstack, Oct 2025 - Apr 2026); Health Canada (Software Engineer Intern · Fullstack, May 2025 - Aug 2025); 8x8 (Software Engineer Intern · Backend, Jan 2024 - May 2024)." />
+<img src="assets/about.svg" width="100%" alt="{{about_alt}}" />
 
 <img src="assets/inventory.svg" width="100%" alt="My stack as an inventory of weapon skins, with a case opening that lands on the gold Karambit (TypeScript). Core: TypeScript, Python, Java, React, Next.js, FastAPI, Node.js, Spring Boot, Tailwind. Cloud, DevOps and data: AWS, Kubernetes, Docker, Terraform, PostgreSQL, Redis, Linux, Supabase. Exploring: Rust, Go, PyTorch, Ansible, Prometheus, Grafana." />
 

@@ -2,6 +2,16 @@
   "login": "Twoos123",
   "name": "Asad Ali",
   "site": "asadbinali.com",
+  "siteContent": {
+    "repo": "Twoos123/asadali-portfolio",
+    "dir": "asadali-portfolio"
+  },
+  "education": "uOttawa · Software Engineering (CO-OP) · Dec 2026",
+  "links": {
+    "portfolio": "https://asadbinali.com",
+    "linkedin": "https://linkedin.com/in/asadbinali/",
+    "email": "masadbali190@gmail.com"
+  },
   "taglines": [
     "Software Engineer · Ottawa, ON",
     "Cloud Infrastructure Intern @ Sun Life",
@@ -12,11 +22,41 @@
     "level": 10,
     "rank": "TOP 2,000 NA"
   },
-  "hideRepos": ["Twoos123", "i-love-you", "seg3103_playground"],
+  "hideRepos": [
+    "Twoos123",
+    "i-love-you",
+    "seg3103_playground"
+  ],
   "knife": "TypeScript",
   "stack": {
-    "core": ["TypeScript", "Python", "Java", "React", "Next.js", "FastAPI", "Node.js", "Spring Boot", "Tailwind"],
-    "cloud": ["AWS", "Kubernetes", "Docker", "Terraform", "PostgreSQL", "Redis", "Linux", "Supabase"],
-    "exploring": ["Rust", "Go", "PyTorch", "Ansible", "Prometheus", "Grafana"]
+    "core": [
+      "TypeScript",
+      "Python",
+      "Java",
+      "React",
+      "Next.js",
+      "FastAPI",
+      "Node.js",
+      "Spring Boot",
+      "Tailwind"
+    ],
+    "cloud": [
+      "AWS",
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "PostgreSQL",
+      "Redis",
+      "Linux",
+      "Supabase"
+    ],
+    "exploring": [
+      "Rust",
+      "Go",
+      "PyTorch",
+      "Ansible",
+      "Prometheus",
+      "Grafana"
+    ]
   }
 }

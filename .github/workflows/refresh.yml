@@ -12,6 +12,7 @@ on:
       - 'scripts/**'
       - 'icons/**'
       - 'profile.config.json'
+      - 'README.template.md'
       - '.github/workflows/refresh.yml'
 
 permissions:
@@ -37,7 +38,7 @@ jobs:
 
       - name: Commit the new drawings
         run: |
-          git add assets
+          git add assets README.md
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

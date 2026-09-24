@@ -111,6 +111,9 @@ export function inventorySvg(config) {
 .win { animation: win ${SPIN}s infinite; }
 @keyframes win { 0%, 27% { opacity: 1; } 30%, 88% { opacity: 0; } 91%, 100% { opacity: 1; } }
 .reveal { font: 700 17px ${HUD}; letter-spacing: 0.5px; fill: #e4ae39; }
+/* While the reel spins (the rest of the time the knife's name shows here). */
+.opening { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; opacity: 0; animation: opening ${SPIN}s infinite; }
+@keyframes opening { 0%, 29% { opacity: 0; } 33%, 86% { opacity: 1; } 89%, 100% { opacity: 0; } }
 .revealsub { font: 600 10px ${HUD}; letter-spacing: 2px; fill: ${C.dim}; }
 .shine { animation: shine 3.2s ease-in-out infinite; }
 @keyframes shine { 0% { transform: translateX(0); } 60%, 100% { transform: translateX(220px); } }
@@ -134,6 +137,7 @@ ${reelCards}
 <path d="M${W / 2} ${REEL_Y + 4}V${REEL_Y + REEL_H - 4}" stroke="#e4ae39" stroke-width="2"/>
 <path d="M${W / 2 - 8} ${REEL_Y}H${W / 2 + 8}L${W / 2} ${REEL_Y + 10}Z" fill="#e4ae39"/>
 <path d="M${W / 2 - 8} ${REEL_Y + REEL_H}H${W / 2 + 8}L${W / 2} ${REEL_Y + REEL_H - 10}Z" fill="#e4ae39"/>
+<text x="${W / 2}" y="${REEL_Y + REEL_H + 40}" text-anchor="middle" class="opening">OPENING CASE…</text>
 <g class="win">
 <text x="${W / 2}" y="${REEL_Y + REEL_H + 32}" text-anchor="middle" class="reveal">${esc(knife ? `${knife.weapon} | ${knife.skill}` : '')}</text>
 <text x="${W / 2}" y="${REEL_Y + REEL_H + 50}" text-anchor="middle" class="revealsub">MAIN STACK</text>

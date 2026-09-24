@@ -1,6 +1,6 @@
 <!-- Generated from README.template.md by scripts/generate.mjs: edit the template, not README.md. -->
 <a href="https://asadbinali.com">
-  <img src="assets/hud.svg" width="100%" alt="My GitHub as a Counter-Strike 2 HUD, over a screenshot of Mirage from mid window. The killfeed is my latest GitHub activity, the score shows this week's contributions and my streak, and the ammo is the latest repo's commits and stars." />
+  <img src="assets/hud.svg" width="100%" alt="Asad Ali, software engineer. A Counter-Strike 2 banner over Mirage from mid window, with my contributions over the last year, my day streak and this week's count, and my latest GitHub activity as the killfeed." />
 </a>
 
 <p align="center">

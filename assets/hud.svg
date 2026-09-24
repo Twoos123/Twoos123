@@ -70,7 +70,7 @@
 <g transform="translate(56 262)">
 <rect width="134" height="60" rx="4" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.12"/>
 <rect width="134" height="3" rx="1.5" fill="#a8e27c"/>
-<text x="14" y="35" class="stat">977</text>
+<text x="14" y="35" class="stat">978</text>
 <text x="14" y="50" class="statlabel">CONTRIBUTIONS</text>
 </g>
 <g transform="translate(202 262)">
@@ -82,7 +82,7 @@
 <g transform="translate(348 262)">
 <rect width="134" height="60" rx="4" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.12"/>
 <rect width="134" height="3" rx="1.5" fill="#6f9ce6"/>
-<text x="14" y="35" class="stat">99</text>
+<text x="14" y="35" class="stat">100</text>
 <text x="14" y="50" class="statlabel">THIS WEEK</text>
 </g>
 <text x="56" y="352" class="caption">Live from my GitHub · last 12 months · redrawn daily</text>

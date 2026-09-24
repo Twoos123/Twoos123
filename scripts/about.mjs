@@ -3,7 +3,7 @@
 // bar for what I'm looking for (the portfolio's "incoming" experience entry). All of it comes
 // from the portfolio's content, so editing it on asadbinali.com updates this too.
 
-import { C, HUD, esc, r1, svg, textWidth } from './lib.mjs';
+import { C, HUD, esc, svg } from './lib.mjs';
 import { iconSet, registerIcon } from './icons.mjs';
 
 const W = 1000;
@@ -84,8 +84,10 @@ ${chip}
   const barY = contentBottom + 18;
   const H = (incoming ? barY + 76 : contentBottom) + 26;
 
-  // The matchmaking bar: spinner, what I'm looking for, and a search timer that ticks up.
-  const seconds = Array.from({ length: 60 }, (_, i) => `<text x="946" y="${barY + 44 + i * 28}" class="timer">${String(i).padStart(2, '0')}</text>`).join('');
+  // The matchmaking bar: spinner, what I'm looking for, and a search timer that ticks up. The
+  // seconds roll inside a clip that ends well short of the bar's edge, since GitHub's font may
+  // run wider than ours.
+  const seconds = Array.from({ length: 60 }, (_, i) => `<text x="918" y="${barY + 44 + i * 28}" class="timer">${String(i).padStart(2, '0')}</text>`).join('');
   const searching = incoming
     ? `<g>
 <rect x="30" y="${barY}" width="940" height="76" rx="6" fill="url(#search)" stroke="#3ecf6e" stroke-opacity="0.45"/>
@@ -94,7 +96,7 @@ ${chip}
 <text x="96" y="${barY + 25}" class="searching">SEARCHING FOR A TEAM<tspan class="dots">…</tspan></text>
 <text x="96" y="${barY + 47}" class="want">${esc(incoming.role)}</text>
 <text x="96" y="${barY + 66}" class="where">${esc(fit(`${incoming.period} · ${incoming.location}`, 720, 12))}</text>
-<text x="944" y="${barY + 44}" text-anchor="end" class="timer">00:</text>
+<text x="916" y="${barY + 44}" text-anchor="end" class="timer">00:</text>
 <g clip-path="url(#timerclip)"><g class="tick">${seconds}</g></g>
 </g>`
     : '';
@@ -102,12 +104,11 @@ ${chip}
   const defs = `
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11161d"/><stop offset="1" stop-color="#0a0d12"/></linearGradient>
 <linearGradient id="search" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#143522"/><stop offset="1" stop-color="#0c1a12"/></linearGradient>
-<clipPath id="timerclip"><rect x="944" y="${barY + 20}" width="30" height="32"/></clipPath>`;
+<clipPath id="timerclip"><rect x="916" y="${barY + 20}" width="36" height="32"/></clipPath>`;
 
   const style = `
 .eyebrow { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
-.name { font: 700 30px ${HUD}; fill: #fff; letter-spacing: 0.5px; }
-.sub { font: 600 14px ${HUD}; fill: #c7ced6; }
+.heading { font: 700 26px ${HUD}; fill: #fff; letter-spacing: 0.5px; }
 .section { font: 700 10px ${HUD}; letter-spacing: 2.4px; fill: ${C.dim}; }
 .label { font: 700 9.5px ${HUD}; letter-spacing: 1.6px; fill: ${C.dim}; }
 .value { font: 600 13px ${HUD}; fill: #fff; }
@@ -128,13 +129,12 @@ ${chip}
 .tick { animation: tick 60s steps(60) infinite; }
 @keyframes tick { to { transform: translateY(-1680px); } }`;
 
-  const tagline = config.taglines[0] || '';
+  // The banner above already says who I am, so the card goes straight to the details.
   const body = `
 <rect width="${W}" height="${H}" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
 <text x="30" y="40" class="eyebrow">PLAYER CARD</text>
-<text x="30" y="74" class="name">${esc(config.name)}</text>
-<text x="${r1(38 + textWidth(config.name, 30, 0.55))}" y="74" class="sub">${esc(tagline)}</text>
+<text x="30" y="70" class="heading">About me</text>
 <text x="30" y="132" class="section">PLAYER INFO</text>
 <text x="520" y="132" class="section">MATCH HISTORY</text>
 ${infoRows}

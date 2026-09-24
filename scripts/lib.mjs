@@ -81,30 +81,107 @@ ${body}
 `;
 }
 
-// The weapon icon (from icons/) for each stack item, by ring and position: a bit of fun,
-// not a claim about the tech.
-const LOADOUT = {
-  core: [['AK-47', 'ak47'], ['AWP', 'awp'], ['M4A1-S', 'm4a1_silencer'], ['Desert Eagle', 'deagle'], ['M4A4', 'm4a1'], ['SSG 08', 'ssg08'], ['AUG', 'aug'], ['USP-S', 'usp_silencer'], ['Galil AR', 'galilar'], ['FAMAS', 'famas']],
-  cloud: [['MP9', 'mp9'], ['MAC-10', 'mac10'], ['P90', 'p90'], ['UMP-45', 'ump45'], ['Glock-18', 'glock'], ['P250', 'p250'], ['MP7', 'mp7'], ['Five-SeveN', 'fiveseven'], ['CZ75-Auto', 'cz75a']],
-  exploring: [['Nova', 'nova'], ['XM1014', 'xm1014'], ['MAG-7', 'mag7'], ['Negev', 'negev'], ['M249', 'm249'], ['Sawed-Off', 'sawedoff']],
+// The inventory's weapons (icons from icons/): only what drops from cases, so no grenades or
+// gear. Each kind of skill has its own class, as in CS2's buy menu; tools get a mix of the
+// rest. A bit of fun, not a claim about the tech.
+const ARSENAL = {
+  languages: [['AK-47', 'ak47'], ['M4A1-S', 'm4a1_silencer'], ['AWP', 'awp'], ['M4A4', 'm4a1'], ['AUG', 'aug'], ['SG 553', 'sg556'], ['FAMAS', 'famas'], ['Galil AR', 'galilar'], ['SSG 08', 'ssg08']],
+  frameworks: [['Desert Eagle', 'deagle'], ['USP-S', 'usp_silencer'], ['Glock-18', 'glock'], ['P250', 'p250'], ['Five-SeveN', 'fiveseven'], ['CZ75-Auto', 'cz75a'], ['Tec-9', 'tec9'], ['P2000', 'hkp2000'], ['Dual Berettas', 'elite'], ['R8 Revolver', 'revolver']],
+  cloud: [['MP9', 'mp9'], ['MAC-10', 'mac10'], ['P90', 'p90'], ['UMP-45', 'ump45'], ['MP7', 'mp7'], ['MP5-SD', 'mp5sd'], ['PP-Bizon', 'bizon']],
+  data: [['Nova', 'nova'], ['XM1014', 'xm1014'], ['MAG-7', 'mag7'], ['Sawed-Off', 'sawedoff'], ['Negev', 'negev'], ['M249', 'm249']],
+  tools: [['SCAR-20', 'scar20'], ['G3SG1', 'g3sg1'], ['Dual Berettas', 'elite'], ['PP-Bizon', 'bizon'], ['R8 Revolver', 'revolver'], ['MP5-SD', 'mp5sd'], ['Galil AR', 'galilar'], ['Tec-9', 'tec9'], ['XM1014', 'xm1014'], ['FAMAS', 'famas'], ['P2000', 'hkp2000'], ['MAG-7', 'mag7'], ['CZ75-Auto', 'cz75a'], ['SSG 08', 'ssg08'], ['Five-SeveN', 'fiveseven']],
 };
-const RING_RARITY = {
-  core: ['covert', 'classified'],
-  cloud: ['restricted', 'milspec'],
-  exploring: ['industrial', 'consumer'],
-};
+const KNIVES = [['★ Karambit', 'knife_karambit'], ['★ Butterfly Knife', 'knife_butterfly'], ['★ M9 Bayonet', 'knife_m9_bayonet'], ['★ Skeleton Knife', 'knife_skeleton']];
 
-// Every stack item as a skin: { skill, weapon, icon, rarity }. The configured knife is gold.
-export function skins(stack, knife) {
+// Which class a Skills section category (by its title) belongs to.
+const kindOf = (title) =>
+  /language/i.test(title) ? 'languages' : /framework|librar/i.test(title) ? 'frameworks' : /cloud|devops|infra/i.test(title) ? 'cloud' : /data|storage/i.test(title) ? 'data' : 'tools';
+const KIND_NAMES = { languages: 'Languages', frameworks: 'Frameworks', cloud: 'Cloud & DevOps', data: 'Databases', tools: 'Tools' };
+// Stack items the Skills section doesn't list: languages here, anything else counts as a framework.
+const LANGUAGES = new Set(['rust', 'go', 'c', 'csharp', 'kotlin', 'swift', 'ruby', 'scala', 'php', 'java', 'python', 'typescript', 'javascript', 'cpp']);
+
+// Names compared loosely, so "Tailwind CSS" is "Tailwind", "HTML5" is "HTML" and "React.js" is "React".
+export const skillKey = (name) =>
+  String(name)
+    .toLowerCase()
+    .replace(/c\+\+/g, 'cpp')
+    .replace(/c#/g, 'csharp')
+    .replace(/\(.*?\)/g, '')
+    .replace(/[^a-z0-9]/g, '')
+    .replace(/^(html|css)\d$/, '$1')
+    .replace(/^(react|vue)js$/, '$1')
+    .replace(/^tailwindcss$/, 'tailwind')
+    .replace(/^oauth\d*$/, 'oauth');
+
+// How central a skill is sets its rarity: my core stack is covert and classified, the cloud
+// ring restricted and mil-spec, the rest of my resume mil-spec and industrial, and what I'm
+// still exploring industrial and consumer.
+const TIERS = { core: ['covert', 'classified'], cloud: ['restricted', 'milspec'], resume: ['milspec', 'industrial'], exploring: ['industrial', 'consumer'] };
+
+// Markup and config files GitHub counts as languages, which don't earn a knife.
+const NOT_CODE = new Set(['HTML', 'CSS', 'SCSS', 'Less', 'Dockerfile', 'Makefile', 'Shell', 'Batchfile', 'PowerShell', 'HCL', 'Procfile', 'Handlebars', 'EJS', 'Jupyter Notebook']);
+
+// My knives: the languages I write the most code in, going by my repos (at least 10% of it,
+// and in more than one repo, so one big project can't earn one alone).
+export function knifeLanguages(allLanguages) {
+  return allLanguages.filter((l) => !NOT_CODE.has(l.name) && l.repos >= 2 && l.share >= 0.1).slice(0, KNIVES.length);
+}
+
+// Every skill as a skin: { skill, weapon, icon, rarity, kind, knife? }. The knives come
+// first, then the Skills section (my resume) and my configured stack, each skill once.
+export function skins(stack, skillSections, allLanguages) {
+  const ring = new Map();
+  for (const name of ['core', 'cloud', 'exploring']) for (const skill of stack[name] || []) ring.set(skillKey(skill), name);
   const out = [];
-  for (const ring of ['core', 'cloud', 'exploring']) {
-    (stack[ring] || []).forEach((skill, i) => {
-      const [weapon, icon] = LOADOUT[ring][i % LOADOUT[ring].length];
-      out.push({ skill, weapon, icon, rarity: RING_RARITY[ring][i % 2], ring });
-    });
-  }
-  if (knife) out.push({ skill: knife, weapon: '★ Karambit', icon: 'knife_karambit', rarity: 'gold', ring: 'knife' });
+  const seen = new Set();
+  knifeLanguages(allLanguages).forEach((l, i) => {
+    const [weapon, icon] = KNIVES[i];
+    seen.add(skillKey(l.name));
+    out.push({ skill: l.name, weapon, icon, rarity: 'gold', kind: 'languages', knife: l });
+  });
+  // Weapons take turns within each class, rarities within each ring.
+  const count = (counts, key) => (counts[key] = (counts[key] || 0) + 1) - 1;
+  const byKind = {};
+  const byRing = {};
+  const add = (skill, kind) => {
+    const key = skillKey(skill);
+    if (seen.has(key)) return;
+    seen.add(key);
+    const tier = ring.get(key) || 'resume';
+    const [weapon, icon] = ARSENAL[kind][count(byKind, kind) % ARSENAL[kind].length];
+    out.push({ skill, weapon, icon, rarity: TIERS[tier][count(byRing, tier) % 2], kind });
+  };
+  for (const section of skillSections) for (const skill of section.items) add(skill, kindOf(section.title));
+  for (const name of ['core', 'cloud', 'exploring']) for (const skill of stack[name] || []) add(skill, LANGUAGES.has(skillKey(skill)) ? 'languages' : name === 'cloud' ? 'cloud' : 'frameworks');
   return out;
+}
+export const kindName = (kind) => KIND_NAMES[kind];
+
+// CS2 Premier's rating bands and colours, from the game's own panorama/styles/rating_emblem.css
+// (color-csrating-tier-0 to -6): a new band every 5,000, gold from 30,000.
+export const PREMIER = [
+  { name: 'Grey', color: '#b0c3d9' },
+  { name: 'Light Blue', color: '#8cc6ff' },
+  { name: 'Blue', color: '#6a7dff' },
+  { name: 'Purple', color: '#c166ff' },
+  { name: 'Pink', color: '#f03cff' },
+  { name: 'Red', color: '#eb4b4b' },
+  { name: 'Gold', color: '#ffd700' },
+];
+// My contributions over the last year as a CS Rating: ten points for each.
+export const RATING_PER_CONTRIBUTION = 10;
+export function premier(contributions) {
+  const rating = contributions * RATING_PER_CONTRIBUTION;
+  const tier = Math.max(0, Math.min(Math.floor(rating / 5000), PREMIER.length - 1));
+  const next = tier < PREMIER.length - 1 ? (tier + 1) * 5000 : null;
+  return {
+    rating,
+    tier,
+    ...PREMIER[tier],
+    next: next && { at: next, name: PREMIER[tier + 1].name, color: PREMIER[tier + 1].color, contributions: Math.ceil((next - rating) / RATING_PER_CONTRIBUTION) },
+    // How far through this band, 0 to 1 (gold has no ceiling).
+    progress: next ? (rating - tier * 5000) / 5000 : 1,
+  };
 }
 
 // The weapon shown for a repo, by its language.

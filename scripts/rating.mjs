@@ -1,14 +1,27 @@
-// rating.svg: a year of contributions as a rating graph, with a gold rating plate for the
-// total and end-of-match style stat tiles.
+// rating.svg: a year of contributions as a CS Rating: a Premier-style rating badge coloured by
+// its band (see premier() in lib.mjs), a rating graph in the same colour, and end-of-match
+// style stat tiles.
 
-import { C, HUD, esc, r1, smooth, svg, textWidth } from './lib.mjs';
+import { C, HUD, PREMIER, RATING_PER_CONTRIBUTION, esc, premier, r1, smooth, svg, textWidth } from './lib.mjs';
 
 const W = 1000;
 const H = 360;
-const GOLD = '#e4ae39';
+
+// A colour mixed toward white, for the badge's number (the game brightens it the same way).
+function lighten(hex, amount) {
+  const n = parseInt(hex.slice(1), 16);
+  return `#${[16, 8, 0].map((shift) => Math.round(((n >> shift) & 255) + (255 - ((n >> shift) & 255)) * amount).toString(16).padStart(2, '0')).join('')}`;
+}
+
+// The rating split as the game shows it: thousands large, ",XXX" smaller.
+function ratingParts(rating) {
+  const major = Math.floor(rating / 1000);
+  return major ? [String(major), `,${String(rating % 1000).padStart(3, '0')}`] : ['', String(rating)];
+}
 
 export function ratingSvg(config, data) {
-  const tier = GOLD;
+  const band = premier(data.total);
+  const tier = band.color;
   const X0 = 300;
   const X1 = 966;
   const Y0 = 58;
@@ -72,13 +85,17 @@ export function ratingSvg(config, data) {
   const defs = `
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11161d"/><stop offset="1" stop-color="#0a0d12"/></linearGradient>
 <linearGradient id="area" x1="0" y1="${Y0}" x2="0" y2="${Y1}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${tier}" stop-opacity="0.35"/><stop offset="1" stop-color="${tier}" stop-opacity="0"/></linearGradient>
-<linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d27a"/><stop offset="0.55" stop-color="${GOLD}"/><stop offset="1" stop-color="#a87a22"/></linearGradient>
+<linearGradient id="wash" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${tier}" stop-opacity="0.6"/><stop offset="1" stop-color="${tier}" stop-opacity="0.12"/></linearGradient>
+<filter id="numshadow" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="1.5" dy="1.5" stdDeviation="0.6" flood-color="#000" flood-opacity="0.9"/></filter>
 <clipPath id="barclip"><rect x="30" y="322" width="940" height="6" rx="3"/></clipPath>`;
 
   const style = `
 .eyebrow { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
-.rating { font: italic 800 46px ${HUD}; fill: #1a1305; letter-spacing: 1px; }
-.platelabel { font: 700 10px ${HUD}; letter-spacing: 2px; fill: ${C.dim}; }
+.rating { font-family: ${HUD}; font-style: italic; font-weight: 800; }
+.major { font-size: 46px; letter-spacing: 0.5px; }
+.minor { font-size: 32px; letter-spacing: 1px; }
+.band { font: 800 11px ${HUD}; letter-spacing: 2.4px; }
+.platelabel { font: 700 10px ${HUD}; letter-spacing: 1.6px; fill: ${C.dim}; }
 .grid { stroke: #fff; stroke-opacity: 0.06; }
 .axis { font: 600 10px ${HUD}; fill: ${C.dim}; fill-opacity: 0.8; }
 .tlabel { font: 700 9px ${HUD}; letter-spacing: 1.6px; fill: ${C.dim}; }
@@ -90,18 +107,29 @@ export function ratingSvg(config, data) {
 .replay { animation: replay 7s linear infinite; }
 @keyframes replay { 0% { opacity: 0; } 4%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }`;
 
-  const value = data.total.toLocaleString('en-US');
+  // The badge: a slanted plate washed in the band's colour, three stripes at its leading edge,
+  // and the rating in the band's colour, brightened.
+  const [major, minor] = ratingParts(band.rating);
+  const stripes = [0.95, 0.65, 0.4].map((opacity, i) => `<path d="M${46 + i * 11} 66H${53 + i * 11}L${37 + i * 11} 136H${30 + i * 11}Z" fill="${tier}" fill-opacity="${opacity}"/>`).join('');
+  // The bands as a ladder, with a marker for how far through this one I am.
+  const ladder = PREMIER.map((b, i) => `<rect x="${30 + i * 33}" y="194" width="30" height="5" rx="1.5" fill="${b.color}" fill-opacity="${i === band.tier ? 1 : i < band.tier ? 0.45 : 0.15}"/>`).join('');
+  const markerX = r1(30 + band.tier * 33 + band.progress * 30);
+  const next = band.next ? `${band.next.contributions} MORE TO <tspan fill="${band.next.color}">${band.next.name.toUpperCase()}</tspan>` : 'TOP BAND';
   const body = `
 <rect width="${W}" height="${H}" fill="url(#bg)"/>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
-<text x="30" y="40" class="eyebrow">RATING · LAST 12 MONTHS</text>
+<text x="30" y="40" class="eyebrow">CS RATING · LAST 12 MONTHS</text>
 <g class="plate">
-<path d="M46 76H236L222 146H32Z" fill="#000" fill-opacity="0.35"/>
-<path d="M42 70H232L218 140H28Z" fill="url(#plate)"/>
-<path d="M42 70H60L46 140H28Z" fill="#fff" fill-opacity="0.18"/>
-<text x="130" y="122" text-anchor="middle" class="rating">${esc(value)}</text>
-<text x="30" y="168" class="platelabel">CONTRIBUTIONS</text>
-<text x="30" y="186" class="platelabel" fill-opacity="0.7">${data.thisWeek} THIS WEEK</text>
+<path d="M50 72H256L240 142H34Z" fill="#000" fill-opacity="0.4"/>
+<path d="M46 66H252L236 136H30Z" fill="#0d1117"/>
+<path d="M46 66H252L236 136H30Z" fill="url(#wash)" stroke="${tier}" stroke-opacity="0.55" stroke-width="1.2"/>
+${stripes}
+<text x="226" y="118" text-anchor="end" class="rating" fill="${lighten(tier, 0.35)}" filter="url(#numshadow)"><tspan class="major">${esc(major)}</tspan><tspan class="minor">${esc(minor)}</tspan></text>
+<text x="30" y="164" class="band" fill="${tier}">${esc(band.name.toUpperCase())}</text>
+<text x="30" y="182" class="platelabel">${data.total.toLocaleString('en-US')} CONTRIBUTIONS × ${RATING_PER_CONTRIBUTION}</text>
+${ladder}
+<path d="M${markerX - 4} 208L${markerX} 202L${markerX + 4} 208Z" fill="#fff"/>
+<text x="30" y="226" class="platelabel" fill-opacity="0.8">${next}</text>
 </g>
 ${grid}
 ${months.join('')}
@@ -113,6 +141,7 @@ ${tiles}
 <g clip-path="url(#barclip)">${bar}</g>
 ${key}`;
 
-  return svg(W, H, `${data.total} contributions in the last year, drawn as a rating graph`, defs, style, body);
+  const alt = `${data.total} contributions in the last year as a CS Premier rating of ${band.rating.toLocaleString('en-US')} (${band.name} band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages.`;
+  return { svg: svg(W, H, alt, defs, style, body), alt };
 }
 

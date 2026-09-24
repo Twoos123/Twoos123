@@ -12,11 +12,11 @@
 
 <img src="assets/about.svg" width="100%" alt="{{about_alt}}" />
 
-<img src="assets/inventory.svg" width="100%" alt="My stack as an inventory of weapon skins, with a case opening that lands on the gold Karambit (TypeScript). Core: TypeScript, Python, Java, React, Next.js, FastAPI, Node.js, Spring Boot, Tailwind. Cloud, DevOps and data: AWS, Kubernetes, Docker, Terraform, PostgreSQL, Redis, Linux, Supabase. Exploring: Rust, Go, PyTorch, Ansible, Prometheus, Grafana." />
+<img src="assets/inventory.svg" width="100%" alt="{{inventory_alt}}" />
 
 <img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
 
-<img src="assets/rating.svg" width="100%" alt="My contributions over the last year as a gold rating graph, with streaks, my best day and my top languages." />
+<img src="assets/rating.svg" width="100%" alt="{{rating_alt}}" />
 
 <a href="https://asadbinali.com">
   <img src="assets/gg.svg" width="100%" alt="Visit asadbinali.com for the full portfolio." />

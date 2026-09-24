@@ -11,9 +11,16 @@ const COMMIT = 'd4c2d8cad26f8fd3eba09b104ef10f26748ff629';
 const BASE = `https://raw.githubusercontent.com/${REPO}/${COMMIT}/cs2/panorama/images`;
 
 const EQUIPMENT = [
-  'ak47', 'awp', 'm4a1_silencer', 'm4a1', 'deagle', 'ssg08', 'aug', 'usp_silencer', 'galilar', 'famas',
-  'mp9', 'mac10', 'p90', 'ump45', 'glock', 'p250', 'mp7', 'fiveseven', 'cz75a',
-  'nova', 'xm1014', 'mag7', 'negev', 'm249', 'sawedoff', 'knife_karambit',
+  // Rifles and snipers
+  'ak47', 'm4a1_silencer', 'awp', 'm4a1', 'aug', 'sg556', 'famas', 'galilar', 'ssg08', 'scar20', 'g3sg1',
+  // Pistols
+  'deagle', 'usp_silencer', 'glock', 'p250', 'fiveseven', 'cz75a', 'tec9', 'hkp2000', 'elite', 'revolver',
+  // SMGs
+  'mp9', 'mac10', 'p90', 'ump45', 'mp7', 'mp5sd', 'bizon',
+  // Heavy
+  'nova', 'xm1014', 'mag7', 'sawedoff', 'negev', 'm249',
+  // Knives
+  'knife_karambit', 'knife_butterfly', 'knife_m9_bayonet', 'knife_skeleton',
 ];
 const FILES = {
   ...Object.fromEntries(EQUIPMENT.map((name) => [name, `icons/equipment/${name}.svg`])),

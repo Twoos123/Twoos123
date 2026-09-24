@@ -84,13 +84,20 @@ async function siteContent({ repo, dir }) {
     if (!res.ok) throw new Error(`${repo}/${dir}/${path}: ${res.status}`);
     return res;
   };
-  const [experience, about, resume] = await Promise.all(['experience', 'about', 'resume'].map((name) => get(`src/content/${name}.json`).then((r) => r.json())));
+  const [experience, about, resume, skills] = await Promise.all(['experience', 'about', 'resume', 'skills'].map((name) => get(`src/content/${name}.json`).then((r) => r.json())));
   const logos = {};
   for (const entry of experience.entries) {
     const file = (entry.logo || '').split('?')[0];
     if (file && !logos[file]) logos[file] = await (await get(`public${file}`)).text();
   }
-  return { experience: experience.entries, currently: about.currently.rows, resumeUrl: resume.links.view, logos };
+  return {
+    experience: experience.entries,
+    currently: about.currently.rows,
+    resumeUrl: resume.links.view,
+    // The Skills section, which mirrors my resume: [{ title, items: [name] }].
+    skills: skills.categories.map((c) => ({ title: c.title, items: c.items.map((item) => item.name) })),
+    logos,
+  };
 }
 
 export async function loadData(config, token) {
@@ -109,16 +116,19 @@ export async function loadData(config, token) {
       languages: r.languages.edges,
     }));
 
+  // Every language across my repos: how much code, and in how many repos.
   const bytes = new Map();
   for (const repo of repos) {
     for (const { size, node } of repo.languages) {
-      const entry = bytes.get(node.name) || { name: node.name, color: node.color || '#8b949e', size: 0 };
+      const entry = bytes.get(node.name) || { name: node.name, color: node.color || '#8b949e', size: 0, repos: 0 };
       entry.size += size;
+      entry.repos += 1;
       bytes.set(node.name, entry);
     }
   }
   const totalBytes = [...bytes.values()].reduce((sum, l) => sum + l.size, 0) || 1;
-  const languages = [...bytes.values()].sort((a, b) => b.size - a.size).slice(0, 6).map((l) => ({ ...l, share: l.size / totalBytes }));
+  const allLanguages = [...bytes.values()].sort((a, b) => b.size - a.size).map((l) => ({ ...l, share: l.size / totalBytes }));
+  const languages = allLanguages.slice(0, 6);
 
   const calendar = user.contributionsCollection.contributionCalendar;
   const days = calendar.weeks.flatMap((w) => w.contributionDays);
@@ -146,6 +156,7 @@ export async function loadData(config, token) {
     repos,
     publicRepos: user.repositories.totalCount,
     languages,
+    allLanguages,
     weeks,
     total: calendar.totalContributions,
     thisWeek: days.slice(-7).reduce((sum, d) => sum + d.contributionCount, 0),

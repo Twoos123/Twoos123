@@ -3,7 +3,7 @@
 // the edges, and in the archway a T keeps walking into a headshot.
 
 import { readFileSync } from 'node:fs';
-import { C, HUD, esc, r1, svg, textWidth, weaponFor } from './lib.mjs';
+import { C, HUD, esc, premier, r1, svg, textWidth, weaponFor } from './lib.mjs';
 import { iconSet } from './icons.mjs';
 
 const W = 1000;
@@ -147,10 +147,11 @@ ${taglines}`,
   };
 }
 
-// This year's numbers, in one row under the name.
+// This year's numbers, in one row under the name. Contributions wear their CS Rating band's
+// colour, as on rating.svg.
 function stats(data) {
   return [
-    [data.total.toLocaleString('en-US'), 'CONTRIBUTIONS', C.money],
+    [data.total.toLocaleString('en-US'), 'CONTRIBUTIONS', premier(data.total).color],
     [data.current, 'DAY STREAK', C.t],
     [data.thisWeek, 'THIS WEEK', C.ct],
   ]

@@ -1,7 +1,7 @@
 // btn-*.svg: CS2 menu-style buttons for the README's links. Each is its own image because a
 // README image can only link to one place.
 
-import { C, HUD, esc, svg } from './lib.mjs';
+import { C, HUD, esc, r1, svg } from './lib.mjs';
 
 const W = 200;
 const H = 56;
@@ -13,28 +13,37 @@ const ICONS = {
   email: '<rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 6.5L12 13L21 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
 };
 
-function button(kind, label, sub, accent) {
-  const defs = `<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2029"/><stop offset="1" stop-color="#0d1117"/></linearGradient>`;
+// README images can't react to the mouse, so the buttons show they're clickable another way:
+// a shine sweeps across each in turn, left to right along the row, every few seconds.
+const SWEEP = 6;
+const STAGGER = 0.7;
+
+function button(kind, label, sub, accent, index) {
+  const defs = `<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2029"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
   const style = `
 .label { font: 800 14px ${HUD}; letter-spacing: 1.8px; fill: #fff; }
 .sub { font: 600 10.5px ${HUD}; letter-spacing: 0.4px; fill: ${C.dim}; }
 .glow { animation: glow 2.8s ease-in-out infinite alternate; }
-@keyframes glow { from { opacity: 0.55; } to { opacity: 1; } }`;
+@keyframes glow { from { opacity: 0.55; } to { opacity: 1; } }
+.shine { animation: sweep ${SWEEP}s ease-in-out ${r1(index * STAGGER)}s infinite; }
+@keyframes sweep { 0% { transform: translateX(0); } 14%, 100% { transform: translateX(${W + 90}px); } }`;
   const body = `
 <rect width="${W}" height="${H}" fill="url(#bg)"/>
-<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="6" fill="none" stroke="#fff" stroke-opacity="0.12"/>
 <rect x="0" y="0" width="4" height="${H}" fill="${accent}" class="glow"/>
 <g transform="translate(18 16)" style="color:${accent}">${ICONS[kind]}</g>
 <text x="54" y="26" class="label">${esc(label)}</text>
-<text x="54" y="42" class="sub">${esc(sub)}</text>`;
+<text x="54" y="42" class="sub">${esc(sub)}</text>
+<g transform="skewX(-20)"><rect class="shine" x="-60" y="0" width="46" height="${H}" fill="url(#shine)"/></g>
+<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="6" fill="none" stroke="#fff" stroke-opacity="0.12"/>`;
   return svg(W, H, label, defs, style, body, 6);
 }
 
 export function buttonSvgs(config) {
   return {
-    'btn-portfolio.svg': button('portfolio', 'PORTFOLIO', config.site, C.ct),
-    'btn-resume.svg': button('resume', 'RESUME', 'PDF · Google Drive', '#e4ae39'),
-    'btn-linkedin.svg': button('linkedin', 'LINKEDIN', config.links.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com/, '').replace(/\/$/, ''), '#0a66c2'),
-    'btn-email.svg': button('email', 'EMAIL', config.links.email, C.t),
+    'btn-portfolio.svg': button('portfolio', 'PORTFOLIO', config.site, C.ct, 0),
+    'btn-resume.svg': button('resume', 'RESUME', 'PDF · Google Drive', '#e4ae39', 1),
+    'btn-linkedin.svg': button('linkedin', 'LINKEDIN', config.links.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com/, '').replace(/\/$/, ''), '#0a66c2', 2),
+    'btn-email.svg': button('email', 'EMAIL', config.links.email, C.t, 3),
   };
 }

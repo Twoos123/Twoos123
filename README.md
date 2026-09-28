@@ -16,7 +16,7 @@
 
 <img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
 
-<img src="assets/rating.svg" width="100%" alt="996 contributions in the last year as a CS Premier rating of 9,960 (Light Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
+<img src="assets/rating.svg" width="100%" alt="1015 contributions in the last year as a CS Premier rating of 10,150 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
 
 <a href="https://asadbinali.com">
   <img src="assets/gg.svg" width="100%" alt="Visit asadbinali.com for the full portfolio." />

@@ -69,20 +69,20 @@
 <text x="56" y="232" class="tagline t0" style="animation-delay:-0.6s">Software Engineer · Ottawa, ON</text><text x="56" y="232" class="tagline t1" style="animation-delay:3.4s">Cloud Infrastructure Intern @ Sun Life</text><text x="56" y="232" class="tagline t2" style="animation-delay:7.4s">Building cs2-meta-engine</text>
 <g transform="translate(56 262)">
 <rect width="134" height="60" rx="4" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.12"/>
-<rect width="134" height="3" rx="1.5" fill="#8cc6ff"/>
-<text x="14" y="35" class="stat">996</text>
+<rect width="134" height="3" rx="1.5" fill="#6a7dff"/>
+<text x="14" y="35" class="stat">1,015</text>
 <text x="14" y="50" class="statlabel">CONTRIBUTIONS</text>
 </g>
 <g transform="translate(202 262)">
 <rect width="134" height="60" rx="4" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.12"/>
 <rect width="134" height="3" rx="1.5" fill="#e3b04b"/>
-<text x="14" y="35" class="stat">0</text>
+<text x="14" y="35" class="stat">1</text>
 <text x="14" y="50" class="statlabel">DAY STREAK</text>
 </g>
 <g transform="translate(348 262)">
 <rect width="134" height="60" rx="4" fill="#000" fill-opacity="0.5" stroke="#fff" stroke-opacity="0.12"/>
 <rect width="134" height="3" rx="1.5" fill="#6f9ce6"/>
-<text x="14" y="35" class="stat">74</text>
+<text x="14" y="35" class="stat">91</text>
 <text x="14" y="50" class="statlabel">THIS WEEK</text>
 </g>
 <text x="56" y="352" class="caption">Live from my GitHub · last 12 months · redrawn daily</text>

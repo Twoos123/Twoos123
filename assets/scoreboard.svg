@@ -120,7 +120,7 @@
 <text x="410" y="385.5" class="lang">Python</text>
 <text x="620" y="385.5" text-anchor="end" class="num">407</text>
 <text x="700" y="385.5" text-anchor="end" class="num">1</text>
-<text x="790" y="385.5" text-anchor="end" class="num dim">1d</text>
+<text x="790" y="385.5" text-anchor="end" class="num dim">2d</text>
 <text x="860" y="386" text-anchor="middle" class="mvp">★</text>
 <g transform="translate(890 370.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">432</text></g>
 </g>

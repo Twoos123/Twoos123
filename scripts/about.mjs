@@ -9,6 +9,8 @@ import { iconSet, registerIcon } from './icons.mjs';
 const W = 1000;
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const ROW = 58;
+// Where the W and LIVE chips end: well inside the rows, which end at x 970.
+const CHIP_RIGHT = 954;
 
 // The end of a "May 2026 - Aug 2026" or "Apr 2024 - Present" period, as a Date (or null).
 function periodEnd(period) {
@@ -72,16 +74,19 @@ export function aboutSvg(config, data) {
         const h = Math.min(28, 38 / ratio);
         logo = icons.use(name, 56 - (h * ratio) / 2, y + 25 - h / 2, h, '#fff');
       }
+      // The result chip, inset from the row's right edge, with the dates just before it.
+      const chipW = live ? 50 : 26;
+      const chipX = CHIP_RIGHT - chipW;
       const chip = live
-        ? `<g transform="translate(920 ${y + 16})"><rect width="50" height="20" rx="3" fill="${C.red}" fill-opacity="0.18" stroke="${C.red}" stroke-opacity="0.8"/><circle cx="11" cy="10" r="3.2" fill="${C.red}" class="live"/><text x="19" y="14.4" class="chip" fill="#ffb3ad">LIVE</text></g>`
-        : `<g transform="translate(944 ${y + 16})"><rect width="26" height="20" rx="3" fill="#3ecf6e" fill-opacity="0.16" stroke="#3ecf6e" stroke-opacity="0.7"/><text x="13" y="14.4" text-anchor="middle" class="chip" fill="#8ff0ac">W</text></g>`;
+        ? `<g transform="translate(${chipX} ${y + 15})"><rect width="${chipW}" height="20" rx="3" fill="${C.red}" fill-opacity="0.18" stroke="${C.red}" stroke-opacity="0.8"/><circle cx="11" cy="10" r="3.2" fill="${C.red}" class="live"/><text x="19" y="14.4" class="chip" fill="#ffb3ad">LIVE</text></g>`
+        : `<g transform="translate(${chipX} ${y + 15})"><rect width="${chipW}" height="20" rx="3" fill="#3ecf6e" fill-opacity="0.16" stroke="#3ecf6e" stroke-opacity="0.7"/><text x="13" y="14.4" text-anchor="middle" class="chip" fill="#8ff0ac">W</text></g>`;
       return `<g>
 <rect x="30" y="${y}" width="940" height="${ROW - 8}" rx="5" fill="#fff" fill-opacity="${live ? 0.07 : 0.035}" stroke="#fff" stroke-opacity="${live ? 0.14 : 0.05}"/>
 <rect x="34" y="${y + 4}" width="44" height="${ROW - 16}" rx="4" fill="${whiteLogo ? '#1f2630' : '#f2f4f7'}" stroke="#fff" stroke-opacity="${whiteLogo ? 0.15 : 0}"/>
 ${logo}
 <text x="94" y="${y + 21}" class="org">${esc(job.org)}</text>
 <text x="94" y="${y + 39}" class="role">${esc(fit(job.role, 470, 13))}</text>
-<text x="${live ? 906 : 930}" y="${y + 30}" text-anchor="end" class="period">${esc(job.period)}</text>
+<text x="${chipX - 14}" y="${y + 29.5}" text-anchor="end" class="period">${esc(job.period)}</text>
 ${chip}
 </g>`;
     })

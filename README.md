@@ -10,16 +10,22 @@
   <a href="mailto:masadbali190@gmail.com"><img src="assets/btn-email.svg" height="56" alt="Email: masadbali190@gmail.com" /></a>
 </p>
 
-<img src="assets/about.svg" width="100%" alt="Asad Ali. uOttawa · Software Engineering (CO-OP) · Dec 2026. Role: Cloud Infrastructure Analyst Intern - DevOps @ Sun Life. Building: CS2 Meta Engine. Learning: AI workflows &amp; LLMs in production. Based in: Ottawa, Ontario. Grinding: CS2, Level 10 Faceit (Top 2,000 NA). Looking for: Software Engineer · Seeking New Grad Roles, Available Dec 2026, Ottawa · Toronto · Montreal · Vancouver · Remote. Experience: Sun Life (Cloud Infrastructure Analyst Intern · DevOps, Sep 2026 - Dec 2026); Health Canada (Software Engineer Intern · Fullstack, May 2026 - Aug 2026); University of Ottawa (Software Engineer Intern · Fullstack, Oct 2025 - Apr 2026); Health Canada (Software Engineer Intern · Fullstack, May 2025 - Aug 2025); 8x8 (Software Engineer Intern · Backend, Jan 2024 - May 2024)." />
+<img src="assets/about.svg" width="100%" alt="Asad Ali. uOttawa · Software Engineering (CO-OP) · Dec 2026. Looking for: Software Engineer · Seeking New Grad Roles, Available Dec 2026, Ottawa · Toronto · Montreal · Vancouver · Remote. Experience: Sun Life (Cloud Infrastructure Analyst Intern · DevOps, Sep 2026 - Dec 2026); Health Canada (Software Engineer Intern · Fullstack, May 2026 - Aug 2026); University of Ottawa (Software Engineer Intern · Fullstack, Oct 2025 - Apr 2026); Health Canada (Software Engineer Intern · Fullstack, May 2025 - Aug 2025); 8x8 (Software Engineer Intern · Backend, Jan 2024 - May 2024)." />
 
-<img src="assets/inventory.svg" width="100%" alt="What I build with, as a CS2 inventory. Knives (my most-used languages on GitHub): TypeScript (32% of my code), Python (22% of my code), JavaScript (15% of my code). Languages: Java, PHP, Kotlin, HTML5, CSS3, C++, Rust, Go. Frameworks: React, Next.js, Spring Boot, FastAPI, Node.js, Express, Flask, Tailwind CSS, Chakra UI, Vite, GraphQL, Streamlit, PyTorch. Cloud &amp; DevOps: AWS, Kubernetes, Docker, Terraform, Ansible, Prometheus, Grafana, Jenkins, Linux, Bash, Bitbucket. Databases: PostgreSQL, MySQL, MongoDB, Redis, SQLite, DuckDB, Trino Starburst, Firebase, Supabase. Tools: Git, GitHub, Postman, Playwright, JIRA, OAuth 2.0, Stripe, Vercel, Cloudinary, OpenAI, Groq, Co:Here, Apache, Drupal, Android Studio." />
+<img src="assets/loadout.svg" width="100%" alt="What I build with, as a CS2 loadout. Knives (my most-used languages on GitHub): TypeScript (32% of my code), Python (22% of my code), JavaScript (15% of my code). Languages: Java, C++, HTML5. Frameworks: Next.js, FastAPI, Tailwind CSS, React, Spring Boot, Node.js. Cloud &amp; DevOps: AWS, Docker, Linux, Kubernetes, Terraform, Bash. Databases: Redis, PostgreSQL, MySQL, SQLite, Trino Starburst, Supabase." />
 
-<img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
+<details>
+<summary><b>Full inventory</b>: all 59 skills from my resume</summary>
+<br>
+<img src="assets/inventory.svg" width="100%" alt="Every skill I have, as a CS2 inventory. Knives: TypeScript, Python, JavaScript. Languages: Java, PHP, Kotlin, HTML5, CSS3, C++, Rust, Go. Frameworks: React, Next.js, Spring Boot, FastAPI, Node.js, Express, Flask, Tailwind CSS, Chakra UI, Vite, GraphQL, Streamlit, PyTorch. Cloud &amp; DevOps: AWS, Kubernetes, Docker, Terraform, Ansible, Prometheus, Grafana, Jenkins, Linux, Bash, Bitbucket. Databases: PostgreSQL, MySQL, MongoDB, Redis, SQLite, DuckDB, Trino Starburst, Firebase, Supabase. Tools: Git, GitHub, Postman, Playwright, JIRA, OAuth 2.0, Stripe, Vercel, Cloudinary, OpenAI, Groq, Co:Here, Apache, Drupal, Android Studio." />
+</details>
 
 <img src="assets/rating.svg" width="100%" alt="1015 contributions in the last year as a CS Premier rating of 10,150 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
 
-<a href="https://asadbinali.com">
-  <img src="assets/gg.svg" width="100%" alt="Visit asadbinali.com for the full portfolio." />
-</a>
+<details>
+<summary><b>Scoreboard</b>: my repos by commits and stars</summary>
+<br>
+<img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
+</details>
 
 <p align="center"><sub>Redrawn every day from my GitHub activity and my portfolio's content by <a href="scripts/generate.mjs">scripts/generate.mjs</a>. CS2 icons © Valve Corporation, extracted from the game files by <a href="https://github.com/Juknum/counter-strike-icons">Juknum/counter-strike-icons</a>; the Mirage screenshot and radar are Valve's too (<a href="images/SOURCE.md">sources</a>). This profile isn't affiliated with Valve.</sub></p>

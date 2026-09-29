@@ -143,13 +143,15 @@ export function skins(stack, skillSections, allLanguages) {
   const count = (counts, key) => (counts[key] = (counts[key] || 0) + 1) - 1;
   const byKind = {};
   const byRing = {};
+  // A language's share of the code in my repos, for ranking skills of the same rarity.
+  const shares = new Map(allLanguages.map((l) => [skillKey(l.name), l.share]));
   const add = (skill, kind) => {
     const key = skillKey(skill);
     if (seen.has(key)) return;
     seen.add(key);
     const tier = ring.get(key) || 'resume';
     const [weapon, icon] = ARSENAL[kind][count(byKind, kind) % ARSENAL[kind].length];
-    out.push({ skill, weapon, icon, rarity: TIERS[tier][count(byRing, tier) % 2], kind });
+    out.push({ skill, weapon, icon, rarity: TIERS[tier][count(byRing, tier) % 2], kind, share: shares.get(key) || 0 });
   };
   for (const section of skillSections) for (const skill of section.items) add(skill, kindOf(section.title));
   for (const name of ['core', 'cloud', 'exploring']) for (const skill of stack[name] || []) add(skill, LANGUAGES.has(skillKey(skill)) ? 'languages' : name === 'cloud' ? 'cloud' : 'frameworks');

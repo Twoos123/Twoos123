@@ -12,14 +12,20 @@
 
 <img src="assets/about.svg" width="100%" alt="{{about_alt}}" />
 
-<img src="assets/inventory.svg" width="100%" alt="{{inventory_alt}}" />
+<img src="assets/loadout.svg" width="100%" alt="{{loadout_alt}}" />
 
-<img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
+<details>
+<summary><b>Full inventory</b>: all {{skill_count}} skills from my resume</summary>
+<br>
+<img src="assets/inventory.svg" width="100%" alt="{{inventory_alt}}" />
+</details>
 
 <img src="assets/rating.svg" width="100%" alt="{{rating_alt}}" />
 
-<a href="https://asadbinali.com">
-  <img src="assets/gg.svg" width="100%" alt="Visit asadbinali.com for the full portfolio." />
-</a>
+<details>
+<summary><b>Scoreboard</b>: my repos by commits and stars</summary>
+<br>
+<img src="assets/scoreboard.svg" width="100%" alt="My repositories as the scoreboard, CT for web and T for systems and data: commits as kills, stars as assists, days since the last push as ping, and a rating for each." />
+</details>
 
 <p align="center"><sub>Redrawn every day from my GitHub activity and my portfolio's content by <a href="scripts/generate.mjs">scripts/generate.mjs</a>. CS2 icons © Valve Corporation, extracted from the game files by <a href="https://github.com/Juknum/counter-strike-icons">Juknum/counter-strike-icons</a>; the Mirage screenshot and radar are Valve's too (<a href="images/SOURCE.md">sources</a>). This profile isn't affiliated with Valve.</sub></p>

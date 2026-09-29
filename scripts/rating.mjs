@@ -1,11 +1,10 @@
 // rating.svg: a year of contributions as a CS Rating: a Premier-style rating badge coloured by
-// its band (see premier() in lib.mjs), a rating graph in the same colour, and end-of-match
-// style stat tiles.
+// its band (see premier() in lib.mjs), a rating graph in the same colour, and my languages.
 
 import { C, HUD, PREMIER, RATING_PER_CONTRIBUTION, esc, premier, r1, smooth, svg, textWidth } from './lib.mjs';
 
 const W = 1000;
-const H = 360;
+const H = 306;
 
 // A colour mixed toward white, for the badge's number (the game brightens it the same way).
 function lighten(hex, amount) {
@@ -48,26 +47,13 @@ export function ratingSvg(config, data) {
     lastMonth = month;
   });
 
-  const busiest = new Date(`${data.busiest.date}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
-  const top = data.languages[0];
-  const tiles = [
-    ['CURRENT STREAK', `${data.current}`, 'days'],
-    ['LONGEST STREAK', `${data.longest}`, 'days'],
-    ['BEST DAY', `${data.busiest.contributionCount}`, busiest],
-    ['PULL REQUESTS', `${data.pullRequests}`, 'this year'],
-    ['TOP LANGUAGE', top ? top.name : '—', top ? `${Math.round(top.share * 100)}%` : ''],
-  ]
-    .map(([label, value, sub], i) => {
-      const x = 30 + i * 190;
-      return `<g transform="translate(${x} 244)"><rect width="178" height="62" rx="4" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.07"/><text x="12" y="19" class="tlabel">${label}</text><text x="12" y="47" class="tvalue">${esc(value)}</text><text x="${r1(16 + textWidth(value, 22, 0.55))}" y="47" class="tsub">${esc(sub)}</text></g>`;
-    })
-    .join('');
-
+  // My languages by share of code, under the graph.
+  const BAR_Y = 262;
   let bx = 30;
   const bar = data.languages
     .map((l) => {
       const w = Math.max(940 * l.share, 3);
-      const seg = `<rect x="${r1(bx)}" y="322" width="${r1(w)}" height="6" fill="${l.color}"/>`;
+      const seg = `<rect x="${r1(bx)}" y="${BAR_Y}" width="${r1(w)}" height="6" fill="${l.color}"/>`;
       bx += w;
       return seg;
     })
@@ -76,8 +62,8 @@ export function ratingSvg(config, data) {
   const key = data.languages
     .map((l) => {
       const label = `${l.name} ${Math.round(l.share * 100)}%`;
-      const out = `<circle cx="${kx + 4}" cy="343" r="3.5" fill="${l.color}"/><text x="${kx + 12}" y="347" class="lang">${esc(label)}</text>`;
-      kx += textWidth(label, 11, 0.55) + 28;
+      const out = `<circle cx="${kx + 4}" cy="${BAR_Y + 23}" r="4" fill="${l.color}"/><text x="${kx + 13}" y="${BAR_Y + 27.5}" class="lang">${esc(label)}</text>`;
+      kx += textWidth(label, 12, 0.55) + 30;
       return out;
     })
     .join('');
@@ -87,21 +73,18 @@ export function ratingSvg(config, data) {
 <linearGradient id="area" x1="0" y1="${Y0}" x2="0" y2="${Y1}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${tier}" stop-opacity="0.35"/><stop offset="1" stop-color="${tier}" stop-opacity="0"/></linearGradient>
 <linearGradient id="wash" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${tier}" stop-opacity="0.6"/><stop offset="1" stop-color="${tier}" stop-opacity="0.12"/></linearGradient>
 <filter id="numshadow" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="1.5" dy="1.5" stdDeviation="0.6" flood-color="#000" flood-opacity="0.9"/></filter>
-<clipPath id="barclip"><rect x="30" y="322" width="940" height="6" rx="3"/></clipPath>`;
+<clipPath id="barclip"><rect x="30" y="${BAR_Y}" width="940" height="6" rx="3"/></clipPath>`;
 
   const style = `
-.eyebrow { font: 700 11px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
+.eyebrow { font: 700 12px ${HUD}; letter-spacing: 3px; fill: ${C.dim}; }
 .rating { font-family: ${HUD}; font-style: italic; font-weight: 800; }
 .major { font-size: 46px; letter-spacing: 0.5px; }
 .minor { font-size: 32px; letter-spacing: 1px; }
-.band { font: 800 11px ${HUD}; letter-spacing: 2.4px; }
-.platelabel { font: 700 10px ${HUD}; letter-spacing: 1.6px; fill: ${C.dim}; }
+.band { font: 800 12px ${HUD}; letter-spacing: 2.4px; }
+.platelabel { font: 700 11px ${HUD}; letter-spacing: 1.4px; fill: ${C.dim}; }
 .grid { stroke: #fff; stroke-opacity: 0.06; }
-.axis { font: 600 10px ${HUD}; fill: ${C.dim}; fill-opacity: 0.8; }
-.tlabel { font: 700 9px ${HUD}; letter-spacing: 1.6px; fill: ${C.dim}; }
-.tvalue { font: 700 22px ${HUD}; fill: #fff; }
-.tsub { font: 600 11px ${HUD}; fill: ${C.dim}; }
-.lang { font: 600 11px ${HUD}; fill: #c7ced6; }
+.axis { font: 600 11px ${HUD}; fill: ${C.dim}; fill-opacity: 0.8; }
+.lang { font: 600 12px ${HUD}; fill: #c7ced6; }
 .now { transform-box: fill-box; transform-origin: center; animation: now 1.6s ease-in-out infinite; }
 @keyframes now { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.8); opacity: 0; } }
 .replay { animation: replay 7s linear infinite; }
@@ -137,7 +120,6 @@ ${months.join('')}
 <path d="${line}" fill="none" stroke="${tier}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="dots">${dots}<circle cx="${r1(lx)}" cy="${r1(ly)}" r="6" fill="none" stroke="${tier}" stroke-width="2" class="now"/></g>
 <g class="replay"><circle r="4.5" fill="#fff"><animateMotion dur="7s" repeatCount="indefinite" path="${line}"/></circle><circle r="10" fill="${tier}" fill-opacity="0.35"><animateMotion dur="7s" repeatCount="indefinite" path="${line}"/></circle></g>
-${tiles}
 <g clip-path="url(#barclip)">${bar}</g>
 ${key}`;
 

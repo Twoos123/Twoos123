@@ -20,7 +20,7 @@
 <img src="assets/inventory.svg" width="100%" alt="Every skill I have, as a CS2 inventory. Knives: TypeScript, Python, JavaScript. Languages: Java, PHP, Kotlin, HTML5, CSS3, C++, Rust, Go. Frameworks: React, Next.js, Spring Boot, FastAPI, Node.js, Express, Flask, Tailwind CSS, Chakra UI, Vite, GraphQL, Streamlit, PyTorch. Cloud &amp; DevOps: AWS, Kubernetes, Docker, Terraform, Ansible, Prometheus, Grafana, Jenkins, Linux, Bash, Bitbucket. Databases: PostgreSQL, MySQL, MongoDB, Redis, SQLite, DuckDB, Trino Starburst, Firebase, Supabase. Tools: Git, GitHub, Postman, Playwright, JIRA, OAuth 2.0, Stripe, Vercel, Cloudinary, OpenAI, Groq, Co:Here, Apache, Drupal, Android Studio." />
 </details>
 
-<img src="assets/rating.svg" width="100%" alt="1025 contributions in the last year as a CS Premier rating of 10,250 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
+<img src="assets/rating.svg" width="100%" alt="1026 contributions in the last year as a CS Premier rating of 10,260 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
 
 <details>
 <summary><b>Scoreboard</b>: my repos by commits and stars</summary>

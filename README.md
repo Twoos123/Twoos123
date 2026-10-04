@@ -12,7 +12,7 @@
 
 <img src="assets/about.svg" width="100%" alt="Asad Ali. uOttawa · Software Engineering (CO-OP) · Dec 2026. Looking for: Software Engineer · Seeking New Grad Roles, Available Dec 2026, Ottawa · Toronto · Montreal · Vancouver · Remote. Experience: Sun Life (Cloud Infrastructure Analyst Intern · DevOps, Sep 2026 - Dec 2026); Health Canada (Software Engineer Intern · Fullstack, May 2026 - Aug 2026); University of Ottawa (Software Engineer Intern · Fullstack, Oct 2025 - Apr 2026); Health Canada (Software Engineer Intern · Fullstack, May 2025 - Aug 2025); 8x8 (Software Engineer Intern · Backend, Jan 2024 - May 2024)." />
 
-<img src="assets/loadout.svg" width="100%" alt="What I build with, as a CS2 loadout. Knives (my most-used languages on GitHub): TypeScript (32% of my code), Python (22% of my code), JavaScript (15% of my code). Languages: Java, C++, HTML5. Frameworks: Next.js, FastAPI, Tailwind CSS, React, Spring Boot, Node.js. Cloud &amp; DevOps: AWS, Docker, Linux, Kubernetes, Terraform, Bash. Databases: Redis, PostgreSQL, MySQL, SQLite, Trino Starburst, Supabase." />
+<img src="assets/loadout.svg" width="100%" alt="What I build with, as a CS2 loadout. Knives (my most-used languages on GitHub): TypeScript (33% of my code), Python (26% of my code), JavaScript (13% of my code). Languages: Java, C++, HTML5. Frameworks: Next.js, FastAPI, Tailwind CSS, React, Spring Boot, Node.js. Cloud &amp; DevOps: AWS, Docker, Linux, Kubernetes, Terraform, Bash. Databases: Redis, PostgreSQL, MySQL, SQLite, Trino Starburst, Supabase." />
 
 <details>
 <summary><b>Full inventory</b>: all 59 skills from my resume</summary>
@@ -20,7 +20,7 @@
 <img src="assets/inventory.svg" width="100%" alt="Every skill I have, as a CS2 inventory. Knives: TypeScript, Python, JavaScript. Languages: Java, PHP, Kotlin, HTML5, CSS3, C++, Rust, Go. Frameworks: React, Next.js, Spring Boot, FastAPI, Node.js, Express, Flask, Tailwind CSS, Chakra UI, Vite, GraphQL, Streamlit, PyTorch. Cloud &amp; DevOps: AWS, Kubernetes, Docker, Terraform, Ansible, Prometheus, Grafana, Jenkins, Linux, Bash, Bitbucket. Databases: PostgreSQL, MySQL, MongoDB, Redis, SQLite, DuckDB, Trino Starburst, Firebase, Supabase. Tools: Git, GitHub, Postman, Playwright, JIRA, OAuth 2.0, Stripe, Vercel, Cloudinary, OpenAI, Groq, Co:Here, Apache, Drupal, Android Studio." />
 </details>
 
-<img src="assets/rating.svg" width="100%" alt="1031 contributions in the last year as a CS Premier rating of 10,310 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
+<img src="assets/rating.svg" width="100%" alt="1068 contributions in the last year as a CS Premier rating of 10,680 (Blue band), with a graph of my contributions week by week, my streaks, my best day, my pull requests and my top languages." />
 
 <details>
 <summary><b>Scoreboard</b>: my repos by commits and stars</summary>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 574" width="1000" height="574" role="img" aria-label="Asad Ali's repositories as a scoreboard: commits, stars and days since the last push">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 542" width="1000" height="542" role="img" aria-label="Asad Ali's repositories as a scoreboard: commits, stars and days since the last push">
 <defs>
-<clipPath id="frame"><rect width="1000" height="574" rx="14"/></clipPath>
+<clipPath id="frame"><rect width="1000" height="542" rx="14"/></clipPath>
 
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11161d"/><stop offset="1" stop-color="#0a0d12"/></linearGradient>
 <linearGradient id="ctbar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2d4c7c"/><stop offset="1" stop-color="#2d4c7c" stop-opacity="0.15"/></linearGradient>
@@ -28,8 +28,8 @@
 </style>
 <g clip-path="url(#frame)">
 
-<rect width="1000" height="574" fill="url(#bg)"/>
-<rect x="0.5" y="0.5" width="999" height="573" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
+<rect width="1000" height="542" fill="url(#bg)"/>
+<rect x="0.5" y="0.5" width="999" height="541" rx="14" fill="none" stroke="#fff" stroke-opacity="0.08"/>
 <text x="30" y="46" class="map">Scoreboard</text>
 <text x="30" y="66" class="mapsub">19 PUBLIC REPOS · TOP 5 PER TEAM</text>
 
@@ -44,7 +44,7 @@
 <rect x="30" y="92" width="940" height="38" fill="url(#ctbar)"/>
 <use href="#i-ct_logo" x="38" y="97" width="28" height="28" style="color:#fff" />
 <text x="76" y="117" class="team" fill="#b8d2f5">CT · WEB</text>
-<text x="955" y="119" text-anchor="end" class="teamscore" fill="#b8d2f5">510</text>
+<text x="955" y="119" text-anchor="end" class="teamscore" fill="#b8d2f5">747</text>
 <text x="900" y="116" text-anchor="end" class="small" fill="#b8d2f5">COMMITS</text>
 <g>
 <rect x="30" y="138" width="940" height="29" fill="#6f9ce6" fill-opacity="0.14"/>
@@ -54,7 +54,7 @@
 <text x="410" y="157.5" class="lang">TypeScript</text>
 <text x="620" y="157.5" text-anchor="end" class="num">233</text>
 <text x="700" y="157.5" text-anchor="end" class="num">1</text>
-<text x="790" y="157.5" text-anchor="end" class="num dim">467d</text>
+<text x="790" y="157.5" text-anchor="end" class="num dim">468d</text>
 <text x="860" y="158" text-anchor="middle" class="mvp">★</text>
 <g transform="translate(890 142.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">258</text></g>
 </g>
@@ -62,55 +62,55 @@
 <rect x="30" y="170" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
 <rect x="30" y="170" width="3" height="29" fill="#6f9ce6"/>
 <circle cx="52" cy="184.5" r="5" fill="#3178c6"/>
-<text x="68" y="189.5" class="player">cs2-meta-engine</text>
+<text x="68" y="189.5" class="player">Clockworks</text>
 <text x="410" y="189.5" class="lang">TypeScript</text>
-<text x="620" y="189.5" text-anchor="end" class="num">68</text>
-<text x="700" y="189.5" text-anchor="end" class="num">6</text>
-<text x="790" y="189.5" text-anchor="end" class="num dim">9d</text>
+<text x="620" y="189.5" text-anchor="end" class="num">256</text>
+<text x="700" y="189.5" text-anchor="end" class="num">0</text>
+<text x="790" y="189.5" text-anchor="end" class="num dim">0d</text>
 
-<g transform="translate(890 174.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">218</text></g>
+<g transform="translate(890 174.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">256</text></g>
 </g>
 <g>
 <rect x="30" y="202" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
 <rect x="30" y="202" width="3" height="29" fill="#6f9ce6"/>
-<circle cx="52" cy="216.5" r="5" fill="#f1e05a"/>
-<text x="68" y="221.5" class="player">asadali-portfolio</text>
-<text x="410" y="221.5" class="lang">JavaScript</text>
-<text x="620" y="221.5" text-anchor="end" class="num">139</text>
-<text x="700" y="221.5" text-anchor="end" class="num">2</text>
-<text x="790" y="221.5" text-anchor="end" class="num dim">6d</text>
+<circle cx="52" cy="216.5" r="5" fill="#3178c6"/>
+<text x="68" y="221.5" class="player">cs2-meta-engine</text>
+<text x="410" y="221.5" class="lang">TypeScript</text>
+<text x="620" y="221.5" text-anchor="end" class="num">68</text>
+<text x="700" y="221.5" text-anchor="end" class="num">6</text>
+<text x="790" y="221.5" text-anchor="end" class="num dim">10d</text>
 
-<g transform="translate(890 206.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">189</text></g>
+<g transform="translate(890 206.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">218</text></g>
 </g>
 <g>
 <rect x="30" y="234" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
 <rect x="30" y="234" width="3" height="29" fill="#6f9ce6"/>
 <circle cx="52" cy="248.5" r="5" fill="#f1e05a"/>
-<text x="68" y="253.5" class="player">Pokedex</text>
+<text x="68" y="253.5" class="player">asadali-portfolio</text>
 <text x="410" y="253.5" class="lang">JavaScript</text>
-<text x="620" y="253.5" text-anchor="end" class="num">51</text>
-<text x="700" y="253.5" text-anchor="end" class="num">1</text>
-<text x="790" y="253.5" text-anchor="end" class="num dim">502d</text>
+<text x="620" y="253.5" text-anchor="end" class="num">139</text>
+<text x="700" y="253.5" text-anchor="end" class="num">2</text>
+<text x="790" y="253.5" text-anchor="end" class="num dim">7d</text>
 
-<g transform="translate(890 238.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">76</text></g>
+<g transform="translate(890 238.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">189</text></g>
 </g>
 <g>
 <rect x="30" y="266" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
 <rect x="30" y="266" width="3" height="29" fill="#6f9ce6"/>
 <circle cx="52" cy="280.5" r="5" fill="#f1e05a"/>
-<text x="68" y="285.5" class="player">TriviaGame</text>
+<text x="68" y="285.5" class="player">Pokedex</text>
 <text x="410" y="285.5" class="lang">JavaScript</text>
-<text x="620" y="285.5" text-anchor="end" class="num">19</text>
+<text x="620" y="285.5" text-anchor="end" class="num">51</text>
 <text x="700" y="285.5" text-anchor="end" class="num">1</text>
-<text x="790" y="285.5" text-anchor="end" class="num dim">764d</text>
+<text x="790" y="285.5" text-anchor="end" class="num dim">503d</text>
 
-<g transform="translate(890 270.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">44</text></g>
+<g transform="translate(890 270.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">76</text></g>
 </g>
 
 <rect x="30" y="320" width="940" height="38" fill="url(#tbar)"/>
 <use href="#i-t_logo" x="38" y="325" width="28" height="28" style="color:#fff" />
 <text x="76" y="345" class="team" fill="#f1d496">T · SYSTEMS &amp; DATA</text>
-<text x="955" y="347" text-anchor="end" class="teamscore" fill="#f1d496">495</text>
+<text x="955" y="347" text-anchor="end" class="teamscore" fill="#f1d496">452</text>
 <text x="900" y="344" text-anchor="end" class="small" fill="#f1d496">COMMITS</text>
 <g>
 <rect x="30" y="366" width="940" height="29" fill="#e3b04b" fill-opacity="0.14"/>
@@ -120,7 +120,7 @@
 <text x="410" y="385.5" class="lang">Python</text>
 <text x="620" y="385.5" text-anchor="end" class="num">407</text>
 <text x="700" y="385.5" text-anchor="end" class="num">1</text>
-<text x="790" y="385.5" text-anchor="end" class="num dim">15d</text>
+<text x="790" y="385.5" text-anchor="end" class="num dim">16d</text>
 <text x="860" y="386" text-anchor="middle" class="mvp">★</text>
 <g transform="translate(890 370.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">432</text></g>
 </g>
@@ -132,46 +132,34 @@
 <text x="410" y="417.5" class="lang">Java</text>
 <text x="620" y="417.5" text-anchor="end" class="num">36</text>
 <text x="700" y="417.5" text-anchor="end" class="num">1</text>
-<text x="790" y="417.5" text-anchor="end" class="num dim">1057d</text>
+<text x="790" y="417.5" text-anchor="end" class="num dim">1058d</text>
 
 <g transform="translate(890 402.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">61</text></g>
 </g>
 <g>
 <rect x="30" y="430" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
 <rect x="30" y="430" width="3" height="29" fill="#e3b04b"/>
-<circle cx="52" cy="444.5" r="5" fill="#f34b7d"/>
-<text x="68" y="449.5" class="player">Clockworks</text>
-<text x="410" y="449.5" class="lang">C++</text>
-<text x="620" y="449.5" text-anchor="end" class="num">43</text>
-<text x="700" y="449.5" text-anchor="end" class="num">0</text>
-<text x="790" y="449.5" text-anchor="end" class="num dim">27d</text>
+<circle cx="52" cy="444.5" r="5" fill="#3572A5"/>
+<text x="68" y="449.5" class="player">Python-Planetsim</text>
+<text x="410" y="449.5" class="lang">Python</text>
+<text x="620" y="449.5" text-anchor="end" class="num">4</text>
+<text x="700" y="449.5" text-anchor="end" class="num">1</text>
+<text x="790" y="449.5" text-anchor="end" class="num dim">762d</text>
 
-<g transform="translate(890 434.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">43</text></g>
+<g transform="translate(890 434.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">29</text></g>
 </g>
 <g>
 <rect x="30" y="462" width="940" height="29" fill="#fff" fill-opacity="0.025"/>
 <rect x="30" y="462" width="3" height="29" fill="#e3b04b"/>
-<circle cx="52" cy="476.5" r="5" fill="#3572A5"/>
-<text x="68" y="481.5" class="player">Python-Planetsim</text>
-<text x="410" y="481.5" class="lang">Python</text>
-<text x="620" y="481.5" text-anchor="end" class="num">4</text>
-<text x="700" y="481.5" text-anchor="end" class="num">1</text>
-<text x="790" y="481.5" text-anchor="end" class="num dim">762d</text>
+<circle cx="52" cy="476.5" r="5" fill="#b07219"/>
+<text x="68" y="481.5" class="player">SpringBootApp</text>
+<text x="410" y="481.5" class="lang">Java</text>
+<text x="620" y="481.5" text-anchor="end" class="num">5</text>
+<text x="700" y="481.5" text-anchor="end" class="num">0</text>
+<text x="790" y="481.5" text-anchor="end" class="num dim">1058d</text>
 
-<g transform="translate(890 466.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">29</text></g>
+<g transform="translate(890 466.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">5</text></g>
 </g>
-<g>
-<rect x="30" y="494" width="940" height="29" fill="#fff" fill-opacity="0.05"/>
-<rect x="30" y="494" width="3" height="29" fill="#e3b04b"/>
-<circle cx="52" cy="508.5" r="5" fill="#b07219"/>
-<text x="68" y="513.5" class="player">SpringBootApp</text>
-<text x="410" y="513.5" class="lang">Java</text>
-<text x="620" y="513.5" text-anchor="end" class="num">5</text>
-<text x="700" y="513.5" text-anchor="end" class="num">0</text>
-<text x="790" y="513.5" text-anchor="end" class="num dim">1057d</text>
-
-<g transform="translate(890 498.5)"><path d="M7 0H64L57 20H0Z" fill="#1d1708" stroke="#e4ae39" stroke-opacity="0.75"/><path d="M7 0H13L6 20H0Z" fill="#e4ae39"/><text x="35" y="15" text-anchor="middle" class="rating">5</text></g>
-</g>
-<text x="30" y="556" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · RATING = K + 25 × A</text>
+<text x="30" y="524" class="legend">K = COMMITS · A = STARS · PING = DAYS SINCE LAST PUSH · RATING = K + 25 × A</text>
 </g>
 </svg>
